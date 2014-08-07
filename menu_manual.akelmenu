@@ -1,0 +1,72 @@
+﻿# Системная тема оформления без иконок
+#SET(16)
+
+"CUSTOM"
+{
+  -"&Скрипты…	Ctrl+J" Call("Scripts::Main") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
+  SEPARATOR
+  -"&Регулярные выражения…	Ctrl+Shift+H" Call("Scripts::Main", 1, "SearchReplace.js") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 13)
+  -"Фил&ьтр строк…	Ctrl+Shift+F" Call("Scripts::Main", 1, "LinesFilter_mod.js") Icon("%a\AkelFiles\Plugs\Explorer.dll", 2)
+  -"Вычислить выражение…	Alt+Shift+E" Call("Scripts::Main", 1, "insertEval.js") Icon("%a\AkelFiles\Plugs\icons\calculator_Fugue.ico")
+  SEPARATOR
+  "Открыть в ассо&циированной программе" Exec(`rundll32.exe shell32.dll,ShellExec_RunDLL "%f"`) Icon("%a\AkelFiles\Plugs\icons\external_Fugue.ico")
+  "Открыть в другом &редакторе" Icon("%a\AkelFiles\Plugs\icons\notepad.ico")
+  {
+    -"&Блокнот" Call("Scripts::Main", 1, "openFileIn.js", '"Notepad" "%f"') Icon("%a\AkelFiles\Plugs\icons\notepad.ico")
+    -"&Notepad++	Ctrl+Shift++" Call("Scripts::Main", 1, "openFileIn.js", '"Notepad++" "%f"') Icon("%a\AkelFiles\Plugs\icons\notepad++.ico")
+    #-"&PSPad" Call("Scripts::Main", 1, "openFileIn.js", '"PSPad" "%f"')
+    #-"&EmEditor" Call("Scripts::Main", 1, "openFileIn.js", '"EmEditor" "%f"')
+    SEPARATOR
+    "&AkelPad 3.x" Exec('"%a\..\AkelPad-3.x\AkelPad.exe" "%f"') Icon("%a\..\AkelPad-3.x\AkelPad.exe", 0)
+  }
+  "Открыть в &браузере" Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
+  {
+    -"Internet Explorer" Call("Scripts::Main", 1, "openFileIn.js", '"Internet Explorer" "%f"') Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
+    -"Mozilla Firefox" Call("Scripts::Main", 1, "openFileIn.js", '"Firefox" "%f"') Icon("%a\AkelFiles\Plugs\icons\firefox.ico")
+    -"Opera" Call("Scripts::Main", 1, "openFileIn.js", '"Opera" "%f"') Icon("%a\AkelFiles\Plugs\icons\opera.ico")
+    -"Google Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%f"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
+    -"Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%f"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
+  }
+  SEPARATOR
+  "&Открыть папку в проводнике" Exec("explorer /e, /select, %f") Icon("%a\AkelFiles\Plugs\icons\explorer.ico")
+  -"Открыть папку в &Total Commander" Call("Scripts::Main", 1, "openFileIn.js", '"Total Commander" "%f"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
+  -"Показать в панели проводника	Ctrl+Alt+E" Call("Explorer::Main", 1, "%f") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
+  -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
+  SEPARATOR
+  -"&Редактировать это меню…" Call("ContextMenu::Main", 1, 0)
+}
+
+"EXPLORE"
+{
+  -"К текущему файлу" Call("Explorer::Main", 1, "")
+  -"К текущей папке" Call("Explorer::Main", 1, "%d")
+  SEPARATOR
+  -"Корень AkelPad'а" Call("Explorer::Main", 1, "%a") Icon("%a\AkelPad.exe", 0)
+  -"Плагины AkelPad'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 18)
+  -"Скрипты AkelPad'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Scripts") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
+  -"Настройки Coder'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Coder") Icon("%a\AkelFiles\Plugs\Coder.dll", 12)
+  SEPARATOR
+  -"Логический диск AkelPad'а" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetAkelDir()));`)
+  -"Логический диск текущего файла" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetEditFile(0)));`)
+  SEPARATOR
+  -"Program Files" Call("Explorer::Main", 1, "%ProgramFiles%")
+}
+
+"SPECIAL_CHAR"
+{
+  "&Включить" +Call("SpecialChar::Main")
+  SEPARATOR
+  "Линия &отступа" Call("SpecialChar::Settings", 1, "8", "0", "0", -1, -1)
+  "Спе&циальные символы	Ctrl+Shift+C" Call("SpecialChar::Settings", 1, "1,2,3,4,5,6,7,\x00A0,\x2002,\x2003,\x2009", "0", "0", -1, -1)
+  SEPARATOR
+  "&Пробел" Call("SpecialChar::Settings", 1, "1", "0", "0", -1, -1)
+  "Не&разрывные пробелы" Call("SpecialChar::Settings", 1, "\x00A0,\x2002,\x2003,\x2009", "0", "0", -1, -1)
+  "&Табуляция" Call("SpecialChar::Settings", 1, "2", "0", "0", -1, -1)
+  "&Новая строка" Call("SpecialChar::Settings", 1, "3", "0", "0", -1, -1)
+  "В&ертикальная табуляция" Call("SpecialChar::Settings", 1, "4", "0", "0", -1, -1)
+  "Про&гон листа" Call("SpecialChar::Settings", 1, "5", "0", "0", -1, -1)
+  "Ну&левой символ" Call("SpecialChar::Settings", 1, "6", "0", "0", -1, -1)
+  "&Перенос строки" Call("SpecialChar::Settings", 1, "7", "0", "0", -1, -1)
+  SEPARATOR
+  "&Настроить…" Call("SpecialChar::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+}

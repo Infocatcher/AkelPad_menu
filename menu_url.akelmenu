@@ -1,0 +1,21 @@
+﻿# Системная тема оформления без иконок
+#SET(16)
+
+"&Открыть ссылку" Link(1)
+
+SEPARATOR
+"&Вырезать ссылку" Link(4) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 7)
+"&Копировать ссылку" Link(2) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+"Вст&авить вместо ссылки" Link(5) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 9)
+"&Удалить ссылку" Link(6)  Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
+"В&ыделить ссылку" Link(3)
+
+SEPARATOR
+-"Internet &Explorer" Call("Scripts::Main", 1, "openFileIn.js", '"Internet Explorer" "%u"') Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
+-"Mozilla &Firefox" Call("Scripts::Main", 1, "openFileIn.js", '"Firefox" "%u"') Icon("%a\AkelFiles\Plugs\icons\firefox.ico")
+-"&Opera" Call("Scripts::Main", 1, "openFileIn.js", '"Opera" "%u"') Icon("%a\AkelFiles\Plugs\icons\opera.ico")
+-"Google &Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%u"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
+-"&Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%u"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
+
+#SEPARATOR
+#-"&Редактировать это меню…" Call("ContextMenu::Main", 1, 4)

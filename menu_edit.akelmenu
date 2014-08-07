@@ -1,0 +1,173 @@
+﻿# Системная тема оформления без иконок
+#SET(16)
+
+SET(8)
+"&Отменить	Ctrl+Z" Command(4151) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 10)
+"Пов&торить	Ctrl+Shift+Z" Command(4152) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 11)
+SEPARATOR
+"&Вырезать	Ctrl+X" Command(4153) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 7)
+"&Копировать	Ctrl+C" Command(4154) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+"Копировать…" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+{
+  "С &форматированием" Call("Coder::Settings", 4, 65584) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  SEPARATOR
+  -"&BBCode" Call("Scripts::Main", 1, "CodePoster.js", '-Format="BBCode" -BR="" -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  -"&XHTML strict: <span>, <br/>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br/>" -Strict=true -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  -"&HTML strict: <span>, <br>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br>" -Strict=true -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  #-"XHTML: <font>, <br/>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br/>" -Strict=false -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  -"&HTML: <font>, <br>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br>" -Strict=false -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+}
+"Вст&авить	Ctrl+V" Command(4155) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 9)
+"&Удалить	Del" Command(4156)  Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
+SEPARATOR
+"В&ыделить всё	Ctrl+A" Command(4157)
+UNSET(8)
+SEPARATOR
+"Правописание" Call("SpellCheck::Suggest") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 35)
+"&Преобразовать"
+{
+  "Сортировать строки по возрастанию	Ctrl+Alt+A" Call("Format::LineSortStrAsc") Icon("%a\AkelFiles\Plugs\Format.dll", 0)
+  "Сортировать строки по возрастанию (с учётом регистра)" Call("Format::LineSortStrAsc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 0)
+  "Сортировать строки по убыванию	Ctrl+Alt+Z" Call("Format::LineSortStrDesc") Icon("%a\AkelFiles\Plugs\Format.dll", 1)
+  "Сортировать строки по убыванию (с учётом регистра)" Call("Format::LineSortStrDesc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 1)
+  "Сортировать строки по числовому возрастанию	Ctrl+Alt+0" Call("Format::LineSortIntAsc") Icon("%a\AkelFiles\Plugs\Format.dll", 2)
+  "Сортировать строки по числовому возрастанию (с учётом регистра)" Call("Format::LineSortIntAsc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 2)
+  "Сортировать строки по числовому убыванию	Ctrl+Alt+9" Call("Format::LineSortIntDesc") Icon("%a\AkelFiles\Plugs\Format.dll", 3)
+  "Сортировать строки по числовому убыванию (с учётом регистра)" Call("Format::LineSortIntDesc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 3)
+  SEPARATOR
+  "Вставить разрыв строки в местах переноса" Call("Format::LineFixWrap")
+  "Инвертировать порядок строк	Ctrl+Alt+R" Call("Format::LineReverse")
+  SEPARATOR
+  "Получить уникальные строки" Call("Format::LineGetUnique")
+  "Получить уникальные строки (с учётом регистра)" Call("Format::LineGetUnique", 1)
+  "Получить дублирующиеся строки" Call("Format::LineGetDuplicates")
+  "Получить дублирующиеся строки (с учётом регистра)" Call("Format::LineGetDuplicates", 1)
+  "Удалить дублирующиеся строки" Call("Format::LineRemoveDuplicates")
+  "Удалить дублирующиеся строки (с учётом регистра)" Call("Format::LineRemoveDuplicates", 1)
+  SEPARATOR
+  "Зашифровать выделение (RC4)…" Call("Format::Encrypt")
+  "Расшифровать выделение (RC4)…" Call("Format::Decrypt")
+  SEPARATOR
+  "Извлечь ссылки из HTML-текста" Call("Format::LinkExtract")
+}
+"Выде&ление"
+{
+  #"&Вертикальная вставка	Alt+V" Command(4192)
+  #"&Добавить Tab	Tab" Command(4165)
+  #"&Убрать Tab	Shift+Tab" Command(4167)
+  #"Д&обавить пробел	Space" Command(4169)
+  #"У&брать пробел	Shift+Space" Command(4171)
+  #"Убр&ать первый символ	Shift+Backspace" Command(4173)
+  #"Убра&ть Tab'ы и пробелы в конце	Alt+Backspace" Command(4174)
+  #SEPARATOR
+  "ВСЕ &ПРОПИСНЫЕ	Ctrl+6" Command(4175)
+  "все &строчные	Ctrl+7" Command(4176)
+  "&Как в предложениях.	Ctrl+8" Command(4177)
+  "&Начинать С Прописных	Ctrl+9" Command(4178)
+  "&иНВЕРТИРОВАТЬ	Ctrl+0" Command(4179)
+  SEPARATOR
+  "Перекодироват&ь…	Alt+R" Command(4182)
+}
+"&Скрипты" Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
+{
+  -"&Последний вызванный" Call("Scripts::Main", 1, "")
+  SEPARATOR
+  -"Проверить орфографию…" Call("Scripts::Main", 1, "SpellCheck.js")
+  SEPARATOR
+  -"Вычислить выражение…	Alt+Shift+E" Call("Scripts::Main", 1, "insertEval.js") Icon("%a\AkelFiles\Plugs\icons\calculator_Fugue.ico")
+  -"Вычислить хэш-сумму…" Call("Scripts::Main", 1, "getHash.js") Icon("%a\AkelFiles\Plugs\icons\sum_FatCow.ico")
+  -"Шифрование (AES-256/Blowfish)…" Call("Scripts::Main", 1, "crypt.js") Icon("%a\AkelFiles\Plugs\icons\lock_FatCow.ico")
+  -"Шифрование+ (AES-256/Blowfish/Twofish/Serpent)…" Call("Scripts::Main", 1, "cryptExt.js") Icon("%a\AkelFiles\Plugs\icons\lock_add_FatCow.ico")
+  -"Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
+  -"Перекодировать в текущую кодировку" Call("Scripts::Main", 1, "converter.js", `-mode=2 -type="Charset" -codePage=-1 -dialog=false -saveOptions=0`)
+  -"Перекодировать из текущей кодировки" Call("Scripts::Main", 1, "converter.js", `-mode=1 -type="Charset" -codePage=-1 -dialog=false -saveOptions=0`)
+  -"Конвертер величин" Call("Scripts::Main", 1, "measuresConverter.js")
+  -"Заменить табы пробелами" Call("Scripts::Main", 1, "TabsToSpaces_mod.js")
+  -"JS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js")
+  -"CSS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js", "-css=true")
+  #SEPARATOR
+  #-"Перекодировать HTML-сущности" Call("Scripts::Main", 1, "converter.js", `-mode=0 '-type="HTML"'`)
+  #-"Перекодировать Esc-последовательности" Call("Scripts::Main", 1, "converter.js", `-mode=0 '-type="Escapes"'`)
+  #-"Перекодировать специальные символы &регулярных выражений" Call("Scripts::Main", 1, "converter.js", `-mode=0 '-type="RegExp"'`)
+  SEPARATOR
+  -"Вставить файл…" Call("Scripts::Main", 1, "InsertFile.js")
+  -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico", 0)
+  #SEPARATOR
+  #-"Исправить набор En->Ru" Call("Scripts::Main", 1, "KeybLayoutEngRus.js")
+  #-"Исправить набор Ru->En" Call("Scripts::Main", 1, "KeybLayoutRusEng.js")
+  #-"Транслитерация En->Ru" Call("Scripts::Main", 1, "KeybTranslitEngRus.js")
+  #-"Транслитерация Ru->En" Call("Scripts::Main", 1, "KeybTranslitRusEng.js")
+  SEPARATOR
+  -"Справка для выбранного слова…" Call("Scripts::Main", 1, "ChmKeyword.js")
+  -"Открыть файл по относительному пути" Call("Scripts::Main", 1, "openRelativeFile.js") Icon("%a\AkelFiles\Plugs\icons\notebooks_arrow_Fugue.ico")
+  -"Отметить начало выделения/выделить" Call("Scripts::Main", 1, "SelPoint.js")
+  SEPARATOR
+  -"Скрипты…	Ctrl+J" Call("Scripts::Main") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
+}
+SEPARATOR
+"Прокрутка" Icon("%a\AkelFiles\Plugs\Scroll.dll", 1)
+{
+  "&Горизонтальная синхронизация" Call("Scroll::SyncHorz") Icon("%a\AkelFiles\Plugs\Scroll.dll", 0)
+  "&Вертикальная синхронизация" Call("Scroll::SyncVert") Icon("%a\AkelFiles\Plugs\Scroll.dll", 1)
+  SEPARATOR
+  "&Автоматическая прокрутка текста" +Call("Scroll::AutoScroll") Icon("%a\AkelFiles\Plugs\Scroll.dll", 2)
+  "&Обработка непрокручиваемых операций" +Call("Scroll::NoScroll") Icon("%a\AkelFiles\Plugs\Scroll.dll", 3)
+  "Вы&равнивание каретки" +Call("Scroll::AlignCaret") Icon("%a\AkelFiles\Plugs\Scroll.dll", 4)
+  "Авто&фокус и прокрутка вкладок" +Call("Scroll::AutoFocus") Icon("%a\AkelFiles\Plugs\Scroll.dll", 5)
+  SEPARATOR
+  "&Настроить…" Call("Scroll::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+}
+"С&интаксис" Index(-1) Icon("%a\AkelFiles\Plugs\Coder.dll", 4)
+{
+  "&Assembler" Call("Coder::Settings", 1, "asm")
+  "&AutoIt" Call("Coder::Settings", 1, "au3")
+  "&Batch" Call("Coder::Settings", 1, "bat")
+  "&C++" Call("Coder::Settings", 1, "cpp")
+  "&CSS	Ctrl+Alt+C" Call("Coder::Settings", 1, "css")
+  "&HTML	Ctrl+Alt+H" Call("Coder::Settings", 1, "html")
+  "&INI	Ctrl+Alt+I" Call("Coder::Settings", 1, "ini")
+  "&Inno" Call("Coder::Settings", 1, "iss")
+  "&JavaScript	Ctrl+Alt+J" Call("Coder::Settings", 1, "js")
+  "&Lua" Call("Coder::Settings", 1, "lua")
+  "&NSIS" Call("Coder::Settings", 1, "nsi")
+  "&Pascal" Call("Coder::Settings", 1, "dpr")
+  "&Perl" Call("Coder::Settings", 1, "pl")
+  "&PHP	Ctrl+Alt+P" Call("Coder::Settings", 1, "php")
+  "&Python" Call("Coder::Settings", 1, "py")
+  "&RDF" Call("Coder::Settings", 1, "rdf")
+  "&Resource" Call("Coder::Settings", 1, "rc")
+  "&Sharp" Call("Coder::Settings", 1, "cs")
+  "&SQL" Call("Coder::Settings", 1, "sql")
+  "&VBScript" Call("Coder::Settings", 1, "vbs")
+  "&XBL	Ctrl+Alt+B" Call("Coder::Settings", 1, "xbl")
+  "&XML	Ctrl+Alt+X" Call("Coder::Settings", 1, "xml")
+  "&XUL	Ctrl+Alt+U" Call("Coder::Settings", 1, "xul")
+  "chrome.&manifest" Call("Coder::Settings", 1, "manifest")
+  "Меню &AkelPad'а" Call("Coder::Settings", 1, "akelmenu")
+  "Настройки пла&гина Coder" Call("Coder::Settings", 1, "coder")
+  SEPARATOR
+  "Простой &текст	Ctrl+Alt+T" Call("Coder::Settings", 1, "txt")
+  "&Без темы" Call("Coder::Settings", 1, "?")
+  SEPARATOR
+  -"&Восстановить" Call("Scripts::Main", 1, "highlighter.js", "-restore")
+  -"В&ыбрать…	Alt+Shift+H" Call("Scripts::Main", 1, "highlighter.js")
+}
+"От&метить" Icon("%a\AkelFiles\Plugs\Coder.dll", 0)
+{
+  "От&метить зелёным	Ctrl+Q" Call("Coder::HighLight", 2, 0, "#BCF3BC", 1, 0, -1) Icon("%a\AkelFiles\Plugs\icons\highlight_#bcf3bc_green.ico")
+  "Отметить &красным	Ctrl+Alt+1" Call("Coder::HighLight", 2, 0, "#FFCCCC", 1, 0, -1) Icon("%a\AkelFiles\Plugs\icons\highlight_#ffcccc_red.ico")
+  "Отметить &оранжевым	Ctrl+Alt+2" Call("Coder::HighLight", 2, 0, "#FFCC99", 1, 0, -1) Icon("%a\AkelFiles\Plugs\icons\highlight_#ffcc99_orange.ico")
+  "Отметить &бирюзовым	Ctrl+Alt+3" Call("Coder::HighLight", 2, 0, "#AAFFFF", 1, 0, -1) Icon("%a\AkelFiles\Plugs\icons\highlight_#aaffff_cyan.ico")
+  "Отметить &синим	Ctrl+Alt+4" Call("Coder::HighLight", 2, 0, "#C6D2FF", 1, 0, -1) Icon("%a\AkelFiles\Plugs\icons\highlight_#c6d2ff_blue.ico")
+  "Отметить &фиолетовым	Ctrl+Alt+5" Call("Coder::HighLight", 2, 0, "#D5C6FF", 1, 0, -1) Icon("%a\AkelFiles\Plugs\icons\highlight_#d5c6ff_violet.ico")
+  SEPARATOR
+  -"Н&айти предыдущую отметку" Call("Coder::HighLight", 4, 0, 0, 0, 1) Icon("%a\AkelFiles\Plugs\icons\arrow_skip_left_Fugue.ico")
+  -"&Найти следующую отметку" Call("Coder::HighLight", 4, 0, 0, 0, 0) Icon("%a\AkelFiles\Plugs\icons\arrow_skip_right_Fugue.ico")
+  SEPARATOR
+  -"&Убрать все отметки	Ctrl+Shift+Q" Call("Coder::HighLight", 3, 0) Icon("%a\AkelFiles\Plugs\icons\highlight_remove.ico")
+}
+SEPARATOR
+"Hex-код" +Call("HexSel::Main") Icon("%a\AkelFiles\Plugs\HexSel.dll", 0)
+"Статистика" Call("Stats::Main")
+SEPARATOR
+"Полно&экранный режим	F11" Call("FullScreen::Main") Icon("%a\AkelFiles\Plugs\FullScreen.dll", 0)

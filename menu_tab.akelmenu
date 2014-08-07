@@ -1,0 +1,66 @@
+﻿# Системная тема оформления без иконок
+#SET(16)
+
+"Выбор &окна…	F10" Command(10019)
+SEPARATOR
+"&Новая вкладка	Ctrl+N" Command(4101) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 0)
+"&Закрыть вкладку	Ctrl+W" Command(4318)
+-"Забыть об этой вкладке" Call("Scripts::Main", 1, "forgetAboutTab.js") Icon("%a\AkelFiles\Plugs\icons\tab_delete_FatCow.ico")
+"Закр&ыть…"
+{
+  "&Другие	Ctrl+Shift+W" Command(4320)
+  -"С&лева" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js", "-left")
+  -"Спр&ава" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js")
+  SEPARATOR
+  "&Все	Ctrl+Alt+F4" Command(4319)
+  "Все &неизменённые"	Command(4321)
+}
+
+# Только для MDI
+SET(4)
+SEPARATOR
+-"&Вертикально…" Call("Scripts::Main", 1, "tileTabs.js", 'o -item="menu:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow_mod.ico")
+-"&Горизонтально…" Call("Scripts::Main", 1, "tileTabs.js", 'h o -item="menu:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow_mod.ico")
+SEPARATOR
+"&Вертикально" Command(4308) Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow.ico")
+"&Горизонтально" Command(4307) Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow.ico")
+"&Каскадом" Command(4309) Icon("%a\AkelFiles\Plugs\icons\application_cascade_FatCow.ico")
+UNSET(4)
+
+SEPARATOR
+"Открыть в ассо&циированной программе" Exec(`rundll32.exe shell32.dll,ShellExec_RunDLL "%f"`) Icon("%a\AkelFiles\Plugs\icons\external_Fugue.ico")
+"Открыть в другом &редакторе" Icon("%a\AkelFiles\Plugs\icons\notepad.ico")
+{
+  -"&Блокнот" Call("Scripts::Main", 1, "openFileIn.js", '"Notepad" "%f"') Icon("%a\AkelFiles\Plugs\icons\notepad.ico")
+  -"&Notepad++	Ctrl+Shift++" Call("Scripts::Main", 1, "openFileIn.js", '"Notepad++" "%f"') Icon("%a\AkelFiles\Plugs\icons\notepad++.ico")
+  #-"&PSPad" Call("Scripts::Main", 1, "openFileIn.js", '"PSPad" "%f"')
+  #-"&EmEditor" Call("Scripts::Main", 1, "openFileIn.js", '"EmEditor" "%f"')
+  SEPARATOR
+  "&AkelPad 3.x" Exec('"%a\..\AkelPad-3.x\AkelPad.exe" "%f"') Icon("%a\..\AkelPad-3.x\AkelPad.exe", 0)
+}
+"Открыть в &браузере" Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
+{
+  -"Internet &Explorer" Call("Scripts::Main", 1, "openFileIn.js", '"Internet Explorer" "%f"') Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
+  -"Mozilla &Firefox" Call("Scripts::Main", 1, "openFileIn.js", '"Firefox" "%f"') Icon("%a\AkelFiles\Plugs\icons\firefox.ico")
+  -"&Opera" Call("Scripts::Main", 1, "openFileIn.js", '"Opera" "%f"') Icon("%a\AkelFiles\Plugs\icons\opera.ico")
+  -"Google &Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%f"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
+  -"&Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%f"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
+}
+SEPARATOR
+"&Открыть папку в проводнике" Exec("explorer /e, /select, %f") Icon("%a\AkelFiles\Plugs\icons\explorer.ico")
+-"Открыть папку в &Total Commander" Call("Scripts::Main", 1, "openFileIn.js", '"Total Commander" "%f"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
+-"Показать в панели проводника	Ctrl+Alt+E" Call("Explorer::Main", 1, "%f") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
+SEPARATOR
+-"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
+-"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`)
+"&Копировать…"
+{
+  -"&Путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`)
+  -"П&уть к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`)
+  -"Имя файла без рас&ширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`)
+}
+SEPARATOR
+"Меню &проводника" Icon("%a\AkelFiles\Plugs\icons\explorer_files.ico")
+{
+  EXPLORER
+}

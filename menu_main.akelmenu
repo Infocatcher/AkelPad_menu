@@ -1,0 +1,556 @@
+﻿CLEAR
+# Системная тема оформления без иконок
+#SET(16)
+
+"&Файл" Index(-1)
+{
+  "&Новый	Ctrl+N" Command(4101) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 0)
+  "Созд&ать окно	Ctrl+Shift+N" Command(4102) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 1)
+  "&Открыть…	Ctrl+O" Command(4103) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 2)
+  "&Переоткрыть	F5" Command(4104) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 3)
+  SEPARATOR
+  "&Сохранить	Ctrl+S, F2" Command(4105) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 4)
+  "Сохранить &как…	Ctrl+Shift+S" Command(4106) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 5)
+  "Сохранить с форматированием…" Call("Coder::Settings", 4, 131073) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 5)
+
+  # Только для MDI и PMDI
+  SET(1)
+  "Сохранить &все	Ctrl+Alt+F2" Command(4110) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 32)
+  "Сохранить вс&е как…" Command(4111) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 33)
+  UNSET(1)
+
+  SEPARATOR
+  "Пара&метры страницы…" Command(4107)
+  "Предпро&смотр…" Command(4114) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 21)
+  "&Печать…	Ctrl+P" Command(4108) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 6)
+  SEPARATOR
+  "Последние &файлы"
+  {
+    RECENTFILES
+    SEPARATOR1
+    "Удалить несуществующие" Command(5001) Icon("%a\AkelFiles\Plugs\icons\notebook_minus_Fugue.ico")
+    -"Удалить все" Call("Scripts::Main", 1, "ClearRecentFiles.js") Icon("%a\AkelFiles\Plugs\icons\notebooks_minus_Fugue.ico")
+    -"Управление…	Ctrl+F10" Call("RecentFiles::Manage") Icon("%a\AkelFiles\Plugs\RecentFiles.dll", 0)
+  }
+  SEPARATOR
+  "В&ыход	Esc" Command(4109)
+}
+
+"&Правка" Index(-1)
+{
+  "&Отменить	Ctrl+Z" Command(4151) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 10)
+  "Пов&торить	Ctrl+Shift+Z" Command(4152) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 11)
+  "&Буфер отмен" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 10)
+  {
+    -"&Отменить всё" Call("Scripts::Main", 1, "undoRedoAll.js", "-mode=0 -stopOnSaved=false") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 10)
+    -"&Повторить всё" Call("Scripts::Main", 1, "undoRedoAll.js", "-mode=1 -stopOnSaved=false") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 11)
+    SEPARATOR
+    -"От&менить до сохранённого состояния" Call("Scripts::Main", 1, "undoRedoAll.js", "-mode=0 -stopOnSaved=true") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 10)
+    -"По&вторить до сохранённого состояния" Call("Scripts::Main", 1, "undoRedoAll.js", "-mode=1 -stopOnSaved=true") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 11)
+    SEPARATOR
+    -"О&чистить" Call("Scripts::Main", 1, "EvalCmd.js", `'var hWndEdit = AkelPad.GetEditWnd(); AkelPad.SendMessage(hWndEdit, 3087 /*AEM_SETMODIFY*/, 0, 0); AkelPad.SendMessage(hWndEdit, 3079 /*AEM_EMPTYUNDOBUFFER*/, 0, 0);'`) Icon("%a\AkelFiles\Plugs\icons\cross_Diagona.ico")
+  }
+  SEPARATOR
+  "&Вырезать	Ctrl+X" Command(4153) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 7)
+  "&Копировать	Ctrl+C" Command(4154) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  "Копировать…" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  {
+    "С &форматированием" Call("Coder::Settings", 4, 65584) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    SEPARATOR
+    -"&BBCode" Call("Scripts::Main", 1, "CodePoster.js", '-Format="BBCode" -BR="" -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"&XHTML strict: <span>, <br/>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br/>" -Strict=true -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"&HTML strict: <span>, <br>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br>" -Strict=true -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    #-"XHTML: <font>, <br/>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br/>" -Strict=false -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"&HTML: <font>, <br>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br>" -Strict=false -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  }
+  "Вст&авить	Ctrl+V" Command(4155) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 9)
+  "&Удалить	Del" Command(4156)  Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
+  "В&ыделить всё	Ctrl+A" Command(4157)
+  SEPARATOR
+  "Найт&и…	Ctrl+F" Command(4158) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 12)
+  "Найти далее в&низ	F3" Command(4159)
+  "Найти далее ввер&х	Shift+F3" Command(4160)
+  "&Заменить…	Ctrl+H" Command(4161) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 13)
+  "&Перейти к строке…	Ctrl+G" Command(4162)
+  SEPARATOR
+  -"Поиск и замена в фа&йлах…" Call("Scripts::Main", 1, "FindReplaceFiles.js") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 12)
+  -"&Регулярные выражения…	Ctrl+Shift+H" Call("Scripts::Main", 1, "SearchReplace.js") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 13)
+  -"Фил&ьтр строк…	Ctrl+Shift+F" Call("Scripts::Main", 1, "LinesFilter_mod.js") Icon("%a\AkelFiles\Plugs\Explorer.dll", 2)
+  SEPARATOR
+  "Вставить &символ	Ctrl+I" Command(4163) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 14)
+  "Вставить &дату" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+  {
+    "По &умолчанию" Command(4183) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+    -"гггг-мм-&дд	Ctrl+Shift+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+    -"гггг-мм-дд чч:&мм	Ctrl+Alt+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+    -"гггг-мм-дд чч:мм:&сс" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm:ss"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+  }
+  "Выде&ление"
+  {
+    "&Вертикальная вставка	Alt+V" Command(4192)
+    "&Добавить Tab	Tab" Command(4165)
+    "&Убрать Tab	Shift+Tab" Command(4167)
+    "Д&обавить пробел	Space" Command(4169)
+    "У&брать пробел	Shift+Space" Command(4171)
+    "Убр&ать первый символ	Shift+Backspace" Command(4173)
+    "Убра&ть Tab'ы и пробелы в конце	Alt+Backspace" Command(4174)
+    SEPARATOR
+    "ВСЕ &ПРОПИСНЫЕ	Ctrl+6" Command(4175)
+    "все &строчные	Ctrl+7" Command(4176)
+    "&Как в предложениях.	Ctrl+8" Command(4177)
+    "&Начинать С Прописных	Ctrl+9" Command(4178)
+    "&иНВЕРТИРОВАТЬ	Ctrl+0" Command(4179)
+    SEPARATOR
+    "Перекодироват&ь…	Alt+R" Command(4182)
+  }
+  "&Формат новой строки"
+  {
+    "DOS/Windows (0Dh, 0Ah)" Command(4184)
+    "Unix (0Ah)" Command(4185)
+    "Mac (0Dh)" Command(4186)
+  }
+}
+
+"&Кодировки" Index(-1)
+{
+  "Открыть как Windows-1251	Alt+W" Command(4122)
+  "Открыть как DOS-866	Alt+D" Command(4123)
+  "Открыть как КОИ8-Р 	Alt+K" Command(4124)
+  "Открыть как UTF-16LE (стандартная)	Alt+L" Command(4125)
+  "Открыть как UTF-16BE	Alt+B" Command(4126)
+  "Открыть как UTF-8	Alt+U" Command(4127)
+  SEPARATOR
+  "&Открыть как" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 2)
+  {
+    OPENCODEPAGES
+  }
+  SEPARATOR
+  "Сохранить как Windows-1251	Shift+Alt+W" Command(4131)
+  "Сохранить как DOS-866	Shift+Alt+D" Command(4132)
+  "Сохранить как КОИ8-Р	Shift+Alt+K" Command(4133)
+  "Сохранить как UTF-16LE (стандартная)	Shift+Alt+L" Command(4134)
+  "Сохранить как UTF-16BE	Shift+Alt+B" Command(4135)
+  "Сохранить как UTF-8	Shift+Alt+U" Command(4136)
+  "Сохранить как UTF-8 (&без BOM)" Command(4137)
+  SEPARATOR
+  "&Сохранить как" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 5)
+  {
+    SAVECODEPAGES
+  }
+  SEPARATOR
+  "Определить &кодировку	Alt+F5" Command(4121)
+}
+
+"&Вид" Index(-1)
+{
+  "&Шрифт" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 27)
+  {
+    -"У&величить	Ctrl+Num+" Command(4204) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 28)
+    -"У&меньшить	Ctrl+Num−" Command(4205) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 29)
+    SEPARATOR
+    "Courier New &Mod, 11pt	Ctrl+Num0" Font("Courier New Mod", 0, 11)
+    SEPARATOR
+    "Courier &New, 11pt" Font("Courier New", 0, 11)
+    "&Lucida Console, 10pt" Font("Lucida Console", 0, 10)
+    "&Courier, 11pt" Font("Courier", 0, 11)
+    "C&onsolas, 11pt" Font("Consolas", 0, 11)
+    SEPARATOR
+    "&Verdana, 10pt" Font("Verdana", 0, 10)
+    "&Tahoma, 10pt" Font("Tahoma", 0, 10)
+    "&System, 10pt" Font("System", 0, 10)
+    SEPARATOR
+    "&Arial Unicode MS, 11pt" Font("Arial Unicode MS", 0, 11)
+    SEPARATOR
+    "&Выбрать…" Command(4201) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 27)
+  }
+  "&Цвета…" Command(4202)  Icon("%a\AkelFiles\Plugs\ToolBar.dll", 30)
+  SEPARATOR
+  "Только &чтение" Command(4216) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 20)
+  "Перенос по с&ловам	Ctrl+U" Command(4209) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 16)
+  "Раз&делить окно" Command(4212) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 22)
+  "Разделить окно &вертикально	Ctrl+Shift+|" Command(4213) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 23)
+  "Разделить окно &горизонтально	Ctrl+Shift+=" Command(4214) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 24)
+  "&Поверх всех окон	Ctrl+T" Command(4210) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 15)
+  "Панель &инструментов" +Call("ToolBar::Main")
+  "Строка &состояния" Command(4211)
+  SEPARATOR
+  "&Язык" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 31)
+  {
+    LANGUAGES
+    SEPARATOR
+    "Внутренний" Command(6001)
+  }
+}
+
+"Син&таксис" Index(-1)
+{
+  "&Assembler" Call("Coder::Settings", 1, "asm")
+  "&AutoIt" Call("Coder::Settings", 1, "au3")
+  "&Batch" Call("Coder::Settings", 1, "bat")
+  "&C++" Call("Coder::Settings", 1, "cpp")
+  "&CSS	Ctrl+Alt+C" Call("Coder::Settings", 1, "css")
+  "&HTML	Ctrl+Alt+H" Call("Coder::Settings", 1, "html")
+  "&INI	Ctrl+Alt+I" Call("Coder::Settings", 1, "ini")
+  "&Inno" Call("Coder::Settings", 1, "iss")
+  "&JavaScript	Ctrl+Alt+J" Call("Coder::Settings", 1, "js")
+  "&Lua" Call("Coder::Settings", 1, "lua")
+  "&NSIS" Call("Coder::Settings", 1, "nsi")
+  "&Pascal" Call("Coder::Settings", 1, "dpr")
+  "&Perl" Call("Coder::Settings", 1, "pl")
+  "&PHP	Ctrl+Alt+P" Call("Coder::Settings", 1, "php")
+  "&Python" Call("Coder::Settings", 1, "py")
+  "&RDF" Call("Coder::Settings", 1, "rdf")
+  "&Resource" Call("Coder::Settings", 1, "rc")
+  "&Sharp" Call("Coder::Settings", 1, "cs")
+  "&SQL" Call("Coder::Settings", 1, "sql")
+  "&VBScript" Call("Coder::Settings", 1, "vbs")
+  "&XBL	Ctrl+Alt+B" Call("Coder::Settings", 1, "xbl")
+  "&XML	Ctrl+Alt+X" Call("Coder::Settings", 1, "xml")
+  "&XUL	Ctrl+Alt+U" Call("Coder::Settings", 1, "xul")
+  "chrome.&manifest" Call("Coder::Settings", 1, "manifest")
+  "Меню &AkelPad'а" Call("Coder::Settings", 1, "akelmenu")
+  "Настройки пла&гина Coder" Call("Coder::Settings", 1, "coder")
+  SEPARATOR
+  "Простой &текст	Ctrl+Alt+T" Call("Coder::Settings", 1, "txt")
+  "&Без темы" Call("Coder::Settings", 1, "?")
+  SEPARATOR
+  -"&Восстановить" Call("Scripts::Main", 1, "highlighter.js", "-restore")
+  -"В&ыбрать…	Alt+Shift+H" Call("Scripts::Main", 1, "highlighter.js")
+}
+
+"&Настройки" Index(-1)
+{
+  "П&лагины…	Alt+P" Command(4259) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 18)
+  "&Выполнить	Ctrl+F5" Command(4251) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 17)
+  SEPARATOR
+  "Со&хранять отступы слева	Ctrl+L" Command(4254)
+  "Следить за &изменением файла" Command(4253)
+  "&Сохранять время файла" Command(4252)
+  "Не открывать ф&айл дважды" Command(4255)
+
+  # Только для MDI и PMDI
+  SET(1)
+  "Не открывать про&грамму дважды" Command(4256)
+  UNSET(1)
+
+  SEPARATOR
+  "&Оконный режим"
+  {
+    "&Однооконный (SDI)" Command(4261)
+    "&Многооконный (MDI)" Command(4262)
+    "&Псевдо-многооконный (PMDI)" Command(4263)
+  }
+  SEPARATOR
+  "&Параметры…" Command(4260) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 19)
+}
+
+"Пла&гины" Index(-1)
+{
+  "Пр&ограммирование" Icon("%a\AkelFiles\Plugs\Coder.dll", 12)
+  {
+    "&Подсветка синтаксиса" +Call("Coder::HighLight") Icon("%a\AkelFiles\Plugs\Coder.dll", 0)
+    "&Сворачивание блоков" +Call("Coder::CodeFold") Icon("%a\AkelFiles\Plugs\Coder.dll", 1)
+    "&Автодополнение" +Call("Coder::AutoComplete") Icon("%a\AkelFiles\Plugs\Coder.dll", 2)
+    SEPARATOR
+    "&Обновить кэш	Alt+Shift+R" Call("Coder::Settings", 2) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 3)
+    -"Конфигурационные &файлы…" +Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Coder\") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
+    SEPARATOR
+    "&Настроить…" Call("Coder::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  }
+  "Парные с&кобки" Icon("%a\AkelFiles\Plugs\XBrackets.dll", 0)
+  {
+    "&Включить" +Call("XBrackets::Main")
+    SEPARATOR
+    "&Перейти к парной скобке	Ctrl+>" Call("XBrackets::GoToMatchingBracket")
+    "Вы&делить до парной скобки	Ctrl+<" Call("XBrackets::SelToMatchingBracket")
+    SEPARATOR
+    "&Настроить…" Call("XBrackets::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  }
+  "Спе&циальные символы" Icon("%a\AkelFiles\Plugs\SpecialChar.dll", 0) Menu("SPECIAL_CHAR")
+  "Номера строк, &закладки" Icon("%a\AkelFiles\Plugs\LineBoard.dll", 0)
+  {
+    "&Включить	Ctrl+Shift+L" +Call("LineBoard::Main")
+    -"Показать/скрыть п&анель" Call("LineBoard::Main", 4)
+    -"Показать/скрыть &линейку" Call("LineBoard::Main", 3, 17)
+    SEPARATOR
+    #"Список &закладок	Alt+Home" Call("LineBoard::Main::BookmarkList")
+    #"Перейти к &следующей закладке	Alt+PageDown" Call("LineBoard::Main::NextBookmark") Icon(4)
+    #"Перейти к &предыдущей закладке	Alt+PageUp" Call("LineBoard::Main::PrevBookmark") Icon(3)
+    #SEPARATOR
+    #"&Установить/удалить закладку	Alt+Ins" Call("LineBoard::Main::SetBookmark")
+    #"У&далить закладку	Alt+Del" Call("LineBoard::Main::DelBookmark")
+    #"У&далить все закладки	Alt+Shift+Del" Call("LineBoard::Main::DelAllBookmark")
+    -"Список &закладок	Alt+Home" Call("LineBoard::Main", 17)
+    -"Перейти к &предыдущей закладке	Alt+PageUp" Call("LineBoard::Main", 19) Icon("%a\AkelFiles\Plugs\icons\arrow_up_Fugue.ico")
+    -"Перейти к &следующей закладке	Alt+PageDown" Call("LineBoard::Main", 18) Icon("%a\AkelFiles\Plugs\icons\arrow_down_Fugue.ico")
+    SEPARATOR
+    #-"&Установить закладку	Alt+Ins" Call("LineBoard::Main", 15)
+    -"&Установить/удалить закладку	Alt+Ins" Call("LineBoard::Main", 15) Icon("%a\AkelFiles\Plugs\icons\bookmark_document_Fugue.ico")
+    #-"У&далить закладку	Alt+Del" Call("LineBoard::Main", 16) Icon("%a\AkelFiles\Plugs\icons\bookmark_document_minus_Fugue.ico")
+    SEPARATOR
+    -"У&далить все закладки	Alt+Shift+Del" Call("LineBoard::Main", 14)
+    SEPARATOR
+    "&Настроить…" Call("LineBoard::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  }
+  "Проверка ор&фографии" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 35)
+  {
+     "&Фоновая проверка	Alt+Shift+C" +Call("SpellCheck::Background")
+    SEPARATOR
+    "Проверить &документ…" Call("SpellCheck::CheckDocument")
+    "Проверить &выделение…" Call("SpellCheck::CheckSelection")
+    "Проверить &слово…" Call("SpellCheck::Suggest")
+    SEPARATOR
+    "&Настроить…" Call("SpellCheck::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  }
+  SEPARATOR
+  "&Буфер обмена" Icon("%a\AkelFiles\Plugs\Clipboard.dll", 0)
+  {
+    "&Захват" +Call("Clipboard::Capture")
+    "Вставка &серийного номера" Call("Clipboard::PasteSerial")
+    SEPARATOR
+    "&Автоматическое копирование выделения" +Call("Clipboard::SelAutoCopy")
+    "&Вставить текст" Call("Clipboard::Paste") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 9)
+    SEPARATOR
+    "&Настроить…" Call("Clipboard::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  }
+  "Со&хранение файла" Icon("%a\AkelFiles\Plugs\SaveFile.dll", 0)
+  {
+    "&Автосохранение	Ctrl+Alt+S" +Call("SaveFile::AutoSave")
+    "&Сохранение без BOM" +Call("SaveFile::SaveNoBOM")
+    SEPARATOR
+    "&Настроить…" Call("SaveFile::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  }
+  "Просмотр &лога" Icon("%a\AkelFiles\Plugs\Log.dll", 0)
+  {
+    "&В реальном времени" Call("Log::Watch")
+    "&Панель вывода" Call("Log::Output") Icon("%a\AkelFiles\Plugs\Log.dll", 1)
+    SEPARATOR
+    "&Настроить…" Call("Log::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  }
+  SEPARATOR
+  "Панель &инструментов" +Call("ToolBar::Main")
+  "Панель &проводника	Ctrl+Shift+E" +Call("Explorer::Main") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
+  "Панель поиск&а	F7" Call("QSearch::QSearch") Icon("%a\AkelFiles\Plugs\QSearch.dll", 0)
+  SEPARATOR
+  -"&Скрипты…	Ctrl+J" +Call("Scripts::Main") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
+  -"&Макросы…	Ctrl+M" +Call("Macros::Main") Icon("%a\AkelFiles\Plugs\Macros.dll", 0)
+  -"С&ессии…	Alt+O" +Call("Sessions::Main") Icon("%a\AkelFiles\Plugs\Sessions.dll", 0)
+  -"Последние фа&йлы…" Call("RecentFiles::Manage") Icon("%a\AkelFiles\Plugs\RecentFiles.dll", 0)
+  "&Шаблоны" Icon("%a\AkelFiles\Plugs\Toolbar.dll", 37)
+  {
+    "&Включить" +Call("Templates::Main")
+    SEPARATOR
+    "&Открыть…" Call("Templates::Open") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 2)
+  }
+  SEPARATOR
+  -"&Горячие клавиши…" +Call("Hotkeys::Main") Icon("%a\AkelFiles\Plugs\Hotkeys.dll", 0)
+  "Клавиша &Escape" Icon("%a\AkelFiles\Plugs\Exit.dll", 0)
+  {
+    "&Включить" +Call("Exit::Main")
+    SEPARATOR
+    "&Настроить…" Call("Exit::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  }
+  "&Выделение текста, навигация"
+  {
+    "Умная клавиша &Home" +Call("SmartSel::SmartHome")
+    "     &Инвертировать" +Call("SmartSel::altSmartHome")
+    "Умная клавиша &End" +Call("SmartSel::SmartEnd")
+    "     Ин&вертировать" +Call("SmartSel::altSmartEnd")
+    "Умные клавиши &Up/Down" +Call("SmartSel::SmartUpDown")
+    "     +&PageUp/PageDown" +Call("SmartSel::altSmartUpDown")
+    "Исключить EO&L из выделения" +Call("SmartSel::NoSelEOL")
+    "     Только если &одна строка" +Call("SmartSel::altNoSelEOL")
+    "Умная клавиша &Backspace" +Call("SmartSel::SmartBackspace")
+  }
+  SEPARATOR
+  "Свернуть в &трей	Alt+M" Call("MinimizeToTray::Now") Icon("%a\AkelFiles\Plugs\MinimizeToTray.dll", 0)
+  "Сворачивать в т&рей всегда" +Call("MinimizeToTray::Always")
+  "Быстрое переключение &диалогов" +Call("QSearch::DialogSwitcher") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 34)
+  "Машинное &чтение текста" +Call("Speech::Main") Icon("%a\AkelFiles\Plugs\Speech.dll", 0)
+  "Зв&уковой набор текста" +Call("Sounds::Main") Icon("%a\AkelFiles\Plugs\Sounds.dll", 0)
+}
+
+"&Инструменты" Index(-1)
+{
+  "Открыть в ассо&циированной программе" Exec(`rundll32.exe shell32.dll,ShellExec_RunDLL "%f"`) Icon("%a\AkelFiles\Plugs\icons\external_Fugue.ico")
+  SEPARATOR
+  -"Internet &Explorer" Call("Scripts::Main", 1, "openFileIn.js", '"Internet Explorer" "%f"') Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
+  -"Mozilla &Firefox" Call("Scripts::Main", 1, "openFileIn.js", '"Firefox" "%f"') Icon("%a\AkelFiles\Plugs\icons\firefox.ico")
+  -"&Opera" Call("Scripts::Main", 1, "openFileIn.js", '"Opera" "%f"') Icon("%a\AkelFiles\Plugs\icons\opera.ico")
+  -"Google &Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%f"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
+  -"&Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%f"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
+  SEPARATOR
+  -"&Блокнот	Alt+N" Call("Scripts::Main", 1, "openFileIn.js", '"Notepad" "%f"') Icon("%a\AkelFiles\Plugs\icons\notepad.ico")
+  -"&Notepad++	Ctrl+Shift++" Call("Scripts::Main", 1, "openFileIn.js", '"Notepad++" "%f"') Icon("%a\AkelFiles\Plugs\icons\notepad++.ico")
+  #-"&PSPad" Call("Scripts::Main", 1, "openFileIn.js", '"PSPad" "%f"')
+  #-"&EmEditor" Call("Scripts::Main", 1, "openFileIn.js", '"EmEditor" "%f"')
+  SEPARATOR
+  "&AkelPad 3.x" Exec('"%a\..\AkelPad-3.x\AkelPad.exe" "%f"') Icon("%a\..\AkelPad-3.x\AkelPad.exe", 0)
+  SEPARATOR
+  "&Открыть папку в проводнике" Exec("explorer /e, /select, %f") Icon("%a\AkelFiles\Plugs\icons\explorer.ico")
+  -"Открыть папку в &Total Commander" Call("Scripts::Main", 1, "openFileIn.js", '"Total Commander" "%f"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
+  -"Показать в панели прово&дника	Ctrl+Alt+E" Call("Explorer::Main", 1, "%f") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
+  SEPARATOR
+  -"&Сравнить вкладки (WinMerge)…" Call("Scripts::Main", 1, "winMergeTabs.js", '-item="menu:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\WinMerge.ico")
+  -"С&равнить вкладки (Total Commander)…" Call("Scripts::Main", 1, "winMergeTabs.js", '-path="%COMMANDER_EXE%|%COMMANDER_PATH%\TOTALCMD.EXE|%AkelDir%\..\TOTALCMD\TOTALCMD.EXE" -cmd="<exe> /S=C <f1> <f2>" -item="menu:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
+  SEPARATOR
+  -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
+  -"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`)
+  "&Копировать…"
+  {
+    -"&Путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`)
+    -"П&уть к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`)
+    -"Имя файла без рас&ширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`)
+  }
+  SEPARATOR
+  "Меню &проводника" Icon("%a\AkelFiles\Plugs\icons\explorer_files.ico")
+  {
+    EXPLORER
+  }
+  SEPARATOR
+  -"Р&едактор меню…" Call("Scripts::Main", 1, "PluginText.js")
+  -"Редактировать это мен&ю…" Call("ContextMenu::Main", 1, 1, `"&Инструменты"`)
+}
+"&Закладки" Index(-1)
+{
+  "Добавить &закладку" Favourites(2) Icon(1)
+  "&Добавить закладку…" Favourites(1) Icon(0)
+  "Уда&лить закладку" Favourites(4) Icon("%a\AkelFiles\Plugs\icons\boomark_delete.ico")
+  "&Управление закладками…" Favourites(3) Icon(8)
+  SEPARATOR1
+  FAVOURITES
+}
+
+# Только для MDI и PMDI
+SET(1)
+"&Окно" Index(-1)
+{
+  # Системная тема оформления без иконок
+  #SET(16)
+  "Вкл&адки" Icon("%a\AkelFiles\Plugs\icons\tab_FatCow.ico")
+  {
+    "С&верху" Command(4301)
+    "С&низу" Command(4302)
+    "С&крыть" Command(4303)
+    SEPARATOR
+    "&Стандартные" Command(4304)
+    "Кн&опки" Command(4305)
+    "&Плоские кнопки" Command(4306)
+    SEPARATOR
+    "С&ледующая-Предыдущая" Command(4310)
+    "П&равая-Левая" Command(4311)
+  }
+
+  # Только для MDI
+  SET(4)
+  SEPARATOR
+   -"&Вертикально…" Call("Scripts::Main", 1, "tileTabs.js", 'o -item="menu:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow_mod.ico")
+  -"&Горизонтально…" Call("Scripts::Main", 1, "tileTabs.js", 'h o -item="menu:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow_mod.ico")
+  SEPARATOR
+  "&Вертикально" Command(4308) Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow.ico")
+  "&Горизонтально" Command(4307) Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow.ico")
+  "&Каскадом" Command(4309) Icon("%a\AkelFiles\Plugs\icons\application_cascade_FatCow.ico")
+  UNSET(4)
+
+  SEPARATOR
+  "Вы&ровнять" Icon("%a\AkelFiles\Plugs\icons\window_align_center-center.ico")
+  {
+    #UNSET(16)
+    -"&Вверх влево"      Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=left*top")      Icon("%a\AkelFiles\Plugs\icons\window_align_left-top.ico")
+    -"&Вверх"            Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=center*top")    Icon("%a\AkelFiles\Plugs\icons\window_align_center-top.ico")
+    -"&Вверх вправо"     Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=right*top")     Icon("%a\AkelFiles\Plugs\icons\window_align_right-top.ico")
+    SEPARATOR                                                                                                                              
+    -"По &центру влево"  Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=left*center")   Icon("%a\AkelFiles\Plugs\icons\window_align_left-center.ico")
+    -"По &центру"        Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=center*center") Icon("%a\AkelFiles\Plugs\icons\window_align_center-center.ico")
+    -"По &центру вправо" Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=right*center")  Icon("%a\AkelFiles\Plugs\icons\window_align_right-center.ico")
+    SEPARATOR                                                                                                                              
+    -"В&низ влево"       Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=left*bottom")   Icon("%a\AkelFiles\Plugs\icons\window_align_left-bottom.ico")
+    -"В&низ по центру"   Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=center*bottom") Icon("%a\AkelFiles\Plugs\icons\window_align_center-bottom.ico")
+    -"В&низ вправо"      Call("Scripts::Main", 1, "moveResizeWindow.js", "-move=right*bottom")  Icon("%a\AkelFiles\Plugs\icons\window_align_right-bottom.ico")
+    #SET(16)
+  }
+  "Рас&тянуть" Icon("%a\AkelFiles\Plugs\icons\window_stretch_width.ico")
+  {
+    #UNSET(16)
+    -"В&низ влево + 1280x720" Call("Scripts::Main", 1, "moveResizeWindow.js", "-resize=1280*720 -move=left*bottom") Icon("%a\AkelFiles\Plugs\icons\window_align_left-bottom.ico")
+    SEPARATOR
+    -"Растянуть по &ширине" Call("Scripts::Main", 1, "moveResizeWindow.js", "-resize=100%%* -move=left*") Icon("%a\AkelFiles\Plugs\icons\window_stretch_width.ico")
+    -"Растянуть по &высоте" Call("Scripts::Main", 1, "moveResizeWindow.js", "-resize=*100%% -move=*top")  Icon("%a\AkelFiles\Plugs\icons\window_stretch_height.ico")
+    #SET(16)
+  }
+
+  SEPARATOR
+  "&Закрыть	Ctrl+W" Command(4318)
+  "Закр&ыть…"
+  {
+    "&Другие	Ctrl+Shift+W" Command(4320)
+    -"С&лева" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js", "-left")
+    -"Спр&ава" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js")
+    SEPARATOR
+    "&Все	Ctrl+Alt+F4" Command(4319)
+    "Все &неизменённые"	Command(4321)
+  }
+
+  #SEPARATOR
+  #-"&Список…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1`)
+
+  # Только для MDI
+  SET(4)
+  MDIDOCUMENTS
+  UNSET(4)
+
+  # Только для PMDI
+  SET(2)
+  SEPARATOR
+  "Выбор &окна…	F10" Command(4327)
+  UNSET(2)
+  #UNSET(16)
+}
+UNSET(1)
+
+"&Справка" Index(-1)
+{
+  "&Руководство пользователя	F1" Command(4352) Icon("%a\AkelFiles\Plugs\icons\blue_document_globe_Fugue.ico")
+  SEPARATOR
+  "&Плагины"
+  {
+    "Clipboard-Rus.txt" OpenFile("%a\AkelFiles\Docs\Clipboard-Rus.txt") Icon("%a\AkelFiles\Plugs\Clipboard.dll")
+    "Coder-Rus.txt" OpenFile("%a\AkelFiles\Docs\Coder-Rus.txt") Icon("%a\AkelFiles\Plugs\Coder.dll", 4)
+    "ContextMenu-Rus.txt" OpenFile("%a\AkelFiles\Docs\ContextMenu-Rus.txt") Icon("%a\AkelFiles\Plugs\ContextMenu.dll")
+    "Exit-Rus.txt" OpenFile("%a\AkelFiles\Docs\Exit-Rus.txt") Icon("%a\AkelFiles\Plugs\Exit.dll")
+    "Explorer-Rus.txt" OpenFile("%a\AkelFiles\Docs\Explorer-Rus.txt") Icon("%a\AkelFiles\Plugs\Explorer.dll")
+    "Fonts-Rus.txt" OpenFile("%a\AkelFiles\Docs\Fonts-Rus.txt") Icon("%a\AkelFiles\Plugs\Fonts.dll")
+    "Format-Rus.txt" OpenFile("%a\AkelFiles\Docs\Format-Rus.txt") Icon("%a\AkelFiles\Plugs\Format.dll")
+    "FullScreen-Rus.txt" OpenFile("%a\AkelFiles\Docs\FullScreen-Rus.txt") Icon("%a\AkelFiles\Plugs\FullScreen.dll")
+    "HexSel-Rus.txt" OpenFile("%a\AkelFiles\Docs\HexSel-Rus.txt") Icon("%a\AkelFiles\Plugs\HexSel.dll")
+    "Hotkeys-Rus.txt" OpenFile("%a\AkelFiles\Docs\Hotkeys-Rus.txt") Icon("%a\AkelFiles\Plugs\Hotkeys.dll")
+    "LineBoard-Rus.txt" OpenFile("%a\AkelFiles\Docs\LineBoard-Rus.txt") Icon("%a\AkelFiles\Plugs\LineBoard.dll")
+    "Log-Rus.txt" OpenFile("%a\AkelFiles\Docs\Log-Rus.txt") Icon("%a\AkelFiles\Plugs\Log.dll")
+    "Macros-Rus.txt" OpenFile("%a\AkelFiles\Docs\Macros-Rus.txt") Icon("%a\AkelFiles\Plugs\Macros.dll")
+    "MinimizeToTray-Rus.txt" OpenFile("%a\AkelFiles\Docs\MinimizeToTray-Rus.txt") Icon("%a\AkelFiles\Plugs\MinimizeToTray.dll")
+    "QSearch-Rus.txt" OpenFile("%a\AkelFiles\Docs\QSearch-Rus.txt") Icon("%a\AkelFiles\Plugs\QSearch.dll")
+    "RecentFiles-Rus.txt" OpenFile("%a\AkelFiles\Docs\RecentFiles-Rus.txt") Icon("%a\AkelFiles\Plugs\RecentFiles.dll")
+    "SaveFile-Rus.txt" OpenFile("%a\AkelFiles\Docs\SaveFile-Rus.txt") Icon("%a\AkelFiles\Plugs\SaveFile.dll")
+    "Scripts-Rus.txt" OpenFile("%a\AkelFiles\Docs\Scripts-Rus.txt") Icon("%a\AkelFiles\Plugs\Scripts.dll")
+    "Scroll-Rus.txt" OpenFile("%a\AkelFiles\Docs\Scroll-Rus.txt") Icon("%a\AkelFiles\Plugs\Scroll.dll")
+    "Sessions-Rus.txt" OpenFile("%a\AkelFiles\Docs\Sessions-Rus.txt") Icon("%a\AkelFiles\Plugs\Sessions.dll")
+    "SmartSel-Rus.txt" OpenFile("%a\AkelFiles\Docs\SmartSel-Rus.txt") Icon("%a\AkelFiles\Plugs\SmartSel.dll")
+    "Sounds-Rus.txt" OpenFile("%a\AkelFiles\Docs\Sounds-Rus.txt") Icon("%a\AkelFiles\Plugs\Sounds.dll")
+    "SpecialChar-Rus.txt" OpenFile("%a\AkelFiles\Docs\SpecialChar-Rus.txt") Icon("%a\AkelFiles\Plugs\SpecialChar.dll")
+    "Speech-Rus.txt" OpenFile("%a\AkelFiles\Docs\Speech-Rus.txt") Icon("%a\AkelFiles\Plugs\Speech.dll")
+    "SpellCheck-Rus.txt" OpenFile("%a\AkelFiles\Docs\SpellCheck-Rus.txt") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 35)
+    "Stats-Rus.txt" OpenFile("%a\AkelFiles\Docs\Stats-Rus.txt") Icon("%a\AkelFiles\Plugs\Stats.dll")
+    #"TagsView.txt" OpenFile("%a\AkelFiles\Docs\TagsView.txt") Icon("%a\AkelFiles\Plugs\TagsView.dll")
+    "Templates-Rus.txt" OpenFile("%a\AkelFiles\Docs\Templates-Rus.txt") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 37)
+    "ToolBar-Rus.txt" OpenFile("%a\AkelFiles\Docs\ToolBar-Rus.txt") Icon("%a\AkelFiles\Plugs\ToolBar.dll")
+    "XBrackets-Rus.txt" OpenFile("%a\AkelFiles\Docs\XBrackets-Rus.txt") Icon("%a\AkelFiles\Plugs\XBrackets.dll")
+    SEPARATOR
+    -"&Файлы описаний…" +Call("Explorer::Main", 1, "%a\AkelFiles\Docs\") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
+  }
+  SEPARATOR
+  "&Проверить наличие обновлений…" Exec("%a\AkelFiles\AkelUpdater.exe") Icon("%a\AkelFiles\AkelUpdater.exe")
+  SEPARATOR
+  -"Ин&формация о версиях" Call("Scripts::Main", 1, "VersionInfo.js")
+  "&История версий" OpenFile("%a\AkelFiles\Docs\AkelHistory-Rus.txt") Icon("%a\AkelFiles\Plugs\icons\notebook_Fugue.ico")
+  "&О программе	Alt+F1" Command(4351)
+}

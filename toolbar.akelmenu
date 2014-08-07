@@ -1,0 +1,101 @@
+﻿"Новый (Ctrl+N)" Command(4101) Icon(0)
+#"Создать окно (Ctrl+Shift+N)" Command(4102) Icon(1)
+"Открыть… (Ctrl+O)" Command(4103) Icon(2)
+# Только для MDI и PMDI
+SET(1)
+-"Список окон…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -WindowLeft=%bl -WindowTop=%bb`) Icon("%a\AkelFiles\Plugs\icons\notebooks_Fugue.ico")
+UNSET(1)
+"Переоткрыть (F5)" Command(4104) Icon(3)
+
+#SEPARATOR
+"Сохранить (Ctrl+S, F2)" Command(4105) Icon(4)
+"Сохранить как… (Ctrl+Shift+S)" Command(4106) Icon(5)
+"Сохранить все (Ctrl+Alt+F2)" Command(4110) Icon(32)
+"Автосохранение (Ctrl+Alt+S)" +Call("SaveFile::AutoSave") Icon("%a\AkelFiles\Plugs\SaveFile.dll", 0)
+#"Сохранить все как…" Command(4111) Icon(33)
+
+SEPARATOR
+"Печать… (Ctrl+P)" Command(4108) Icon(6)
+"Предпросмотр…" Command(4114) Icon(21)
+
+SEPARATOR
+"Вырезать (Ctrl+X)" Command(4153) Icon(7)
+"Копировать (Ctrl+C)" Command(4154) Icon(8)
+"Вставить (Ctrl+V)" Command(4155) Icon(9)
+"Удалить (Del)" Command(4156) Icon(25)
+
+SEPARATOR
+"Отменить (Ctrl+Z)" Command(4151) Icon(10)
+"Повторить (Ctrl+Shift+Z)" Command(4152) Icon(11)
+
+SEPARATOR
+"Перевести каретку на предыдущую позицию" Command(4199) Icon("%a\AkelFiles\Plugs\icons\document_page_previous_FatCow.ico")
+"Перевести каретку на следующую позицию" Command(4200) Icon("%a\AkelFiles\Plugs\icons\document_page_next_FatCow.ico")
+
+SEPARATOR
+"Найти… (Ctrl+F)" Command(4158) Icon(12)
+"Заменить… (Ctrl+H)" Command(4161) Icon(13)
+"Вставить символ (Ctrl+I)" Command(4163) Icon(14)
+#"Вставить дату (Ctrl+D)" Command(4183) Icon(26)
+
+#SEPARATOR
+#"Шрифт…" Command(4201) Icon(27)
+#-"Увеличить размер шрифта" Command(4204) Icon(28)
+#-"Уменьшить размер шрифта" Command(4205) Icon(29)
+#"Цвета…" Command(4202) Icon(30)
+
+SEPARATOR
+# Read-only
+"" Command(4216) Icon(20)
+"Перенос по словам (Ctrl+U)" Command(4209) Icon(16)
+
+#-"Разделить окно" Command(4212) Icon(22)
+"Разделить окно вертикально (Ctrl+Shift+|)" Command(4213) Icon(23)
+"Разделить окно горизонтально (Ctrl+Shift+=)" Command(4214) Icon(24)
+
+SET(1) # Hide in SDI
+SET(4) # Hide in PMDI
+-"Разместить MDI окна вертикально…" Call("Scripts::Main", 1, "tileTabs.js", 'o -item="toolbar:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow_mod.ico")
+-"Разместить MDI окна горизонтально…" Call("Scripts::Main", 1, "tileTabs.js", 'h o -item="toolbar:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow_mod.ico")
+UNSET(4)
+UNSET(1)
+
+"Поверх всех окон (Ctrl+T)" Command(4210) Icon(15)
+#"Выполнить (Ctrl+F5)" Command(4251) Icon(17)
+
+SEPARATOR
+"Плагины… (Alt+F5)" Command(4259) Icon(18)
+"Параметры…" Command(4260) Icon(19)
+
+#SEPARATOR
+#-"Макросы" Call("Macros::Main") Icon("%a\AkelFiles\Plugs\Macros.dll", 0)
+#-"Записать макрос" Call("Macros::Main", 2, "%m", "%i") Icon("%a\AkelFiles\Plugs\Macros.dll", 1)
+#-"Выполнить записанный макрос" Call("Macros::Main", 1, "", 1) Icon("%a\AkelFiles\Plugs\Macros.dll", 3)
+#-"Выполнить записанный макрос до конца" Call("Macros::Main", 3, "%m", "%i") Icon("%a\AkelFiles\Plugs\Macros.dll", 4)
+
+SEPARATOR
+#"Подсветка синтаксиса" +Call("Coder::HighLight") Icon("%a\AkelFiles\Plugs\Coder.dll", 0)
+#"Сворачивание блоков" +Call("Coder::CodeFold") Icon("%a\AkelFiles\Plugs\Coder.dll", 1)
+
+#-"Сворачивание блоков: показать/скрыть список" Call("Coder::CodeFold", 1) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
+-"Сворачивание блоков: показать/скрыть список" Call("Scripts::Main", 1, "EvalCmd.js", `'var cf = "Coder::CodeFold"; if(AkelPad.IsPluginRunning(cf)) AkelPad.Call(cf, 1); else AkelPad.Call(cf);'`) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
+
+#"Автодополнение" +Call("Coder::AutoComplete") Icon("%a\AkelFiles\Plugs\Coder.dll", 2)
+
+#"Специальные символы" +Call("SpecialChar::Main") Icon("%a\AkelFiles\Plugs\SpecialChar.dll", 0)
+"Специальные символы" Menu("SPECIAL_CHAR") Icon("%a\AkelFiles\Plugs\SpecialChar.dll", 0)
+#"Специальные символы (Ctrl+Shift+C)" Call("SpecialChar::Settings", 1, "1,2,3,4,5,6,7", "0", "0", -1, -1) Icon("%a\AkelFiles\Plugs\SpecialChar.dll", 0)
+
+"Проверка орфографии (Alt+Shift+C)" +Call("SpellCheck::Background") Icon(35)
+
+#"Номера строк (Ctrl+Shift+L)" +Call("LineBoard::Main") Icon("%a\AkelFiles\Plugs\LineBoard.dll", 0)
+
+"Панель проводника (Ctrl+Shift+E)" +Call("Explorer::Main") Menu("EXPLORE") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
+
+#-"Плагин Hotkeys" +Call("Hotkeys::Main") Icon("%a\AkelFiles\Plugs\Hotkeys.dll", 0)
+#"Запустить Notepad" Exec("notepad.exe") Icon("notepad.exe")
+
+-"Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
+
+#SEPARATOR
+#"Главное меню" Call("ContextMenu::Show", 2, "%bl", "%bb") Icon(38)
