@@ -33,7 +33,7 @@
   -"Показать в панели проводника	Ctrl+Alt+E" Call("Explorer::Main", 1, "%f") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
   -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
   SEPARATOR
-  -"&Редактировать это меню…" Call("ContextMenu::Main", 1, 0)
+  -"Редактировать это мен&ю…" Call("ContextMenu::Main", 1, 0, `"CUSTOM"`)
 }
 
 "EXPLORE"
