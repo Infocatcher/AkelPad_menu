@@ -16,7 +16,7 @@ SEPARATOR
   -"Открыть папку в &Total Commander" Call("Scripts::Main", 1, "openFileIn.js", '"Total Commander" "%f\:"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
   -"Показать в панели проводника	Ctrl+Alt+E" Call("Explorer::Main", 1, "%f") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
   SEPARATOR
-  -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js")
+  -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
   SEPARATOR
   -"Копировать &имя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`)
   -"Копировать &имя файла без расширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`)
@@ -27,7 +27,7 @@ SEPARATOR
   SET(16)
 }
 SEPARATOR
--"Удалить файл из списка" Call("Scripts::Main", 1, "DeleteRecentFile.js", `'%f'`)
--"Удалить все файлы" Call("Scripts::Main", 1, "ClearRecentFiles.js")
+-"Удалить файл из списка" Call("Scripts::Main", 1, "DeleteRecentFile.js", `'%f'`) Icon("%a\AkelFiles\Plugs\icons\cross_Diagona.ico")
+-"Удалить все файлы" Call("Scripts::Main", 1, "ClearRecentFiles.js") Icon("%a\AkelFiles\Plugs\icons\notebooks_minus_Fugue.ico")
 -"Управление последними файлами…	Ctrl+F10" Call("RecentFiles::Manage") Icon("%a\AkelFiles\Plugs\RecentFiles.dll", 0)
 UNSET(16)
