@@ -13,7 +13,7 @@ SEPARATOR
   "Открыть в AkelPad 3.x" Exec('"%a\..\AkelPad-3.x\AkelPad.exe" "%f"') Icon("%a\..\AkelPad-3.x\AkelPad.exe", 0)
   SEPARATOR
   "&Открыть папку в проводнике" Exec("explorer /select, %f") Icon("%a\AkelFiles\Plugs\icons\explorer.ico")
-  -"Открыть папку в &Total Commander" Call("Scripts::Main", 1, "openFileIn.js", '"Total Commander" "%f"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
+  -"Открыть папку в &Total Commander" Call("Scripts::Main", 1, "openFileIn.js", '"Total Commander" "%f\:"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
   -"Показать в панели проводника	Ctrl+Alt+E" Call("Explorer::Main", 1, "%f") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
   SEPARATOR
   -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js")
