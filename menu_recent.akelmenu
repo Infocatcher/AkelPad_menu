@@ -1,7 +1,7 @@
 ﻿# Системная тема оформления без иконок
 SET(16)
 EXPLORER
-SEPARATOR
+SEPARATOR1
 "&Дополнительно"
 {
   UNSET(16)
@@ -23,7 +23,7 @@ SEPARATOR
   -"Копировать &путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`)
   -"Копировать &путь к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`)
   SEPARATOR
-  -"Редактировать это мен&ю…" Call("ContextMenu::Main", 1, 5)
+  -"Редактировать это мен&ю…" Call("ContextMenu::Main", 1, 5, `"&Дополнительно"`)
   SET(16)
 }
 SEPARATOR
