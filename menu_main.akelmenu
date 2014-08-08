@@ -492,7 +492,7 @@ SET(1)
   }
 
   #SEPARATOR
-  #-"&Список…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1`)
+  #-"&Список…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -SingleClick=true`)
 
   # Только для MDI
   SET(4)
