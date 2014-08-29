@@ -19,8 +19,8 @@ SEPARATOR
 # Только для MDI
 SET(4)
 SEPARATOR
--"&Вертикально…" Call("Scripts::Main", 1, "tileTabs.js", 'o -item="menu:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow_mod.ico")
--"&Горизонтально…" Call("Scripts::Main", 1, "tileTabs.js", 'h o -item="menu:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow_mod.ico")
+-"&Вертикально…" Call("Scripts::Main", 1, "tileTabs.js", 'o -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow_mod.ico")
+-"&Горизонтально…" Call("Scripts::Main", 1, "tileTabs.js", 'h o -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow_mod.ico")
 SEPARATOR
 "&Вертикально" Command(4308) Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow.ico")
 "&Горизонтально" Command(4307) Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow.ico")

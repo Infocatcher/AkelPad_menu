@@ -55,8 +55,8 @@ SEPARATOR
 
 SET(1) # Hide in SDI
 SET(4) # Hide in PMDI
--"Разместить MDI окна вертикально…" Call("Scripts::Main", 1, "tileTabs.js", 'o -item="toolbar:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow_mod.ico")
--"Разместить MDI окна горизонтально…" Call("Scripts::Main", 1, "tileTabs.js", 'h o -item="toolbar:%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow_mod.ico")
+-"Разместить MDI окна вертикально…" Call("Scripts::Main", 1, "tileTabs.js", 'o -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow_mod.ico")
+-"Разместить MDI окна горизонтально…" Call("Scripts::Main", 1, "tileTabs.js", 'h o -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow_mod.ico")
 UNSET(4)
 UNSET(1)
 
