@@ -164,6 +164,8 @@ SEPARATOR
   -"Н&айти предыдущую отметку" Call("Coder::HighLight", 4, 0, 0, 0, 1) Icon("%a\AkelFiles\Plugs\icons\arrow_skip_left_Fugue.ico")
   -"&Найти следующую отметку" Call("Coder::HighLight", 4, 0, 0, 0, 0) Icon("%a\AkelFiles\Plugs\icons\arrow_skip_right_Fugue.ico")
   SEPARATOR
+  -"У&правление отметками…" Call("Scripts::Main", 1, "TextMarker.js")
+  SEPARATOR
   -"&Убрать все отметки	Ctrl+Shift+Q" Call("Coder::HighLight", 3, 0) Icon("%a\AkelFiles\Plugs\icons\highlight_remove.ico")
 }
 SEPARATOR
