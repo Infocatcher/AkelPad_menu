@@ -11,7 +11,7 @@
   SEPARATOR
   "&Сохранить	Ctrl+S, F2" Command(4105) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 4)
   "Сохранить &как…	Ctrl+Shift+S" Command(4106) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 5)
-  "Сохранить с форматированием…" Call("Coder::Settings", 4, 131073) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 5)
+  "Сохранить с фор&матированием…" Call("Coder::Settings", 4, 131073) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 5)
 
   # Только для MDI и PMDI
   SET(1)
@@ -20,7 +20,7 @@
   UNSET(1)
 
   SEPARATOR
-  "Пара&метры страницы…" Command(4107)
+  "Параметры страни&цы…" Command(4107)
   "Предпро&смотр…" Command(4114) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 21)
   "&Печать…	Ctrl+P" Command(4108) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 6)
   SEPARATOR
