@@ -72,25 +72,25 @@ SEPARATOR
 {
   -"&Последний вызванный" Call("Scripts::Main", 1, "")
   SEPARATOR
-  -"Проверить орфографию…" Call("Scripts::Main", 1, "SpellCheck.js")
+  -"Проверить &орфографию…" Call("Scripts::Main", 1, "SpellCheck.js")
   SEPARATOR
-  -"Вычислить выражение…	Alt+Shift+E" Call("Scripts::Main", 1, "insertEval.js") Icon("%a\AkelFiles\Plugs\icons\calculator_Fugue.ico")
-  -"Вычислить хэш-сумму…" Call("Scripts::Main", 1, "getHash.js") Icon("%a\AkelFiles\Plugs\icons\sum_FatCow.ico")
-  -"Шифрование (AES-256/Blowfish)…" Call("Scripts::Main", 1, "crypt.js") Icon("%a\AkelFiles\Plugs\icons\lock_FatCow.ico")
-  -"Шифрование+ (AES-256/Blowfish/Twofish/Serpent)…" Call("Scripts::Main", 1, "cryptExt.js") Icon("%a\AkelFiles\Plugs\icons\lock_add_FatCow.ico")
-  -"Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
-  -"Перекодировать в текущую кодировку" Call("Scripts::Main", 1, "converter.js", `-mode=2 -type="Charset" -codePage=-1 -dialog=false -saveOptions=0`)
-  -"Перекодировать из текущей кодировки" Call("Scripts::Main", 1, "converter.js", `-mode=1 -type="Charset" -codePage=-1 -dialog=false -saveOptions=0`)
-  -"Конвертер величин" Call("Scripts::Main", 1, "measuresConverter.js")
-  -"Заменить табы пробелами" Call("Scripts::Main", 1, "TabsToSpaces_mod.js")
-  -"JS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js")
-  -"CSS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js", "-css=true")
+  -"Вы&числить выражение…	Alt+Shift+E" Call("Scripts::Main", 1, "insertEval.js") Icon("%a\AkelFiles\Plugs\icons\calculator_Fugue.ico")
+  -"Вычислить &хэш-сумму…" Call("Scripts::Main", 1, "getHash.js") Icon("%a\AkelFiles\Plugs\icons\sum_FatCow.ico")
+  -"&Шифрование (AES-256/Blowfish)…" Call("Scripts::Main", 1, "crypt.js") Icon("%a\AkelFiles\Plugs\icons\lock_FatCow.ico")
+  -"&Шифрование+ (AES-256/Blowfish/Twofish/Serpent)…" Call("Scripts::Main", 1, "cryptExt.js") Icon("%a\AkelFiles\Plugs\icons\lock_add_FatCow.ico")
+  -"&Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
+  -"Переко&дировать в текущую кодировку" Call("Scripts::Main", 1, "converter.js", `-mode=2 -type="Charset" -codePage=-1 -dialog=false -saveOptions=0`)
+  -"Переко&дировать из текущей кодировки" Call("Scripts::Main", 1, "converter.js", `-mode=1 -type="Charset" -codePage=-1 -dialog=false -saveOptions=0`)
+  -"Конвертер &величин" Call("Scripts::Main", 1, "measuresConverter.js")
+  -"Заменить &табы пробелами" Call("Scripts::Main", 1, "TabsToSpaces_mod.js")
+  -"JS &Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js")
+  -"&CSS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js", "-css=true")
   #SEPARATOR
   #-"Перекодировать HTML-сущности" Call("Scripts::Main", 1, "converter.js", `-mode=0 '-type="HTML"'`)
   #-"Перекодировать Esc-последовательности" Call("Scripts::Main", 1, "converter.js", `-mode=0 '-type="Escapes"'`)
   #-"Перекодировать специальные символы &регулярных выражений" Call("Scripts::Main", 1, "converter.js", `-mode=0 '-type="RegExp"'`)
   SEPARATOR
-  -"Вставить файл…" Call("Scripts::Main", 1, "InsertFile.js")
+  -"Вставить &файл…" Call("Scripts::Main", 1, "InsertFile.js")
   -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico", 0)
   #SEPARATOR
   #-"Исправить набор En->Ru" Call("Scripts::Main", 1, "KeybLayoutEngRus.js")
@@ -98,11 +98,11 @@ SEPARATOR
   #-"Транслитерация En->Ru" Call("Scripts::Main", 1, "KeybTranslitEngRus.js")
   #-"Транслитерация Ru->En" Call("Scripts::Main", 1, "KeybTranslitRusEng.js")
   SEPARATOR
-  -"Справка для выбранного слова…" Call("Scripts::Main", 1, "ChmKeyword.js")
+  -"Сп&равка для выбранного слова…" Call("Scripts::Main", 1, "ChmKeyword.js")
   -"Открыть файл по относительному пути" Call("Scripts::Main", 1, "openRelativeFile.js") Icon("%a\AkelFiles\Plugs\icons\notebooks_arrow_Fugue.ico")
   -"Отметить начало выделения/выделить" Call("Scripts::Main", 1, "SelPoint.js")
   SEPARATOR
-  -"Скрипты…	Ctrl+J" Call("Scripts::Main") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
+  -"&Скрипты…	Ctrl+J" Call("Scripts::Main") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
 }
 SEPARATOR
 "Прокрутка" Icon("%a\AkelFiles\Plugs\Scroll.dll", 1)
