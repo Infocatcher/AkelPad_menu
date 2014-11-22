@@ -26,29 +26,29 @@ SEPARATOR
 "Правописание" Call("SpellCheck::Suggest") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 35)
 "&Преобразовать"
 {
-  "Сортировать строки по возрастанию	Ctrl+Alt+A" Call("Format::LineSortStrAsc") Icon("%a\AkelFiles\Plugs\Format.dll", 0)
-  "Сортировать строки по возрастанию (с учётом регистра)" Call("Format::LineSortStrAsc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 0)
-  "Сортировать строки по убыванию	Ctrl+Alt+Z" Call("Format::LineSortStrDesc") Icon("%a\AkelFiles\Plugs\Format.dll", 1)
-  "Сортировать строки по убыванию (с учётом регистра)" Call("Format::LineSortStrDesc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 1)
-  "Сортировать строки по числовому возрастанию	Ctrl+Alt+0" Call("Format::LineSortIntAsc") Icon("%a\AkelFiles\Plugs\Format.dll", 2)
-  "Сортировать строки по числовому возрастанию (с учётом регистра)" Call("Format::LineSortIntAsc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 2)
-  "Сортировать строки по числовому убыванию	Ctrl+Alt+9" Call("Format::LineSortIntDesc") Icon("%a\AkelFiles\Plugs\Format.dll", 3)
-  "Сортировать строки по числовому убыванию (с учётом регистра)" Call("Format::LineSortIntDesc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 3)
+  "Сортировать строки по &возрастанию	Ctrl+Alt+A" Call("Format::LineSortStrAsc") Icon("%a\AkelFiles\Plugs\Format.dll", 0)
+  "Сортировать строки по &возрастанию (с учётом регистра)" Call("Format::LineSortStrAsc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 0)
+  "Сортировать строки по &убыванию	Ctrl+Alt+Z" Call("Format::LineSortStrDesc") Icon("%a\AkelFiles\Plugs\Format.dll", 1)
+  "Сортировать строки по &убыванию (с учётом регистра)" Call("Format::LineSortStrDesc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 1)
+  "Сортировать строки по &числовому возрастанию	Ctrl+Alt+0" Call("Format::LineSortIntAsc") Icon("%a\AkelFiles\Plugs\Format.dll", 2)
+  "Сортировать строки по &числовому возрастанию (с учётом регистра)" Call("Format::LineSortIntAsc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 2)
+  "Сортировать строки по ч&исловому убыванию	Ctrl+Alt+9" Call("Format::LineSortIntDesc") Icon("%a\AkelFiles\Plugs\Format.dll", 3)
+  "Сортировать строки по ч&исловому убыванию (с учётом регистра)" Call("Format::LineSortIntDesc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 3)
   SEPARATOR
-  "Вставить разрыв строки в местах переноса" Call("Format::LineFixWrap")
-  "Инвертировать порядок строк	Ctrl+Alt+R" Call("Format::LineReverse")
+  "Вставить &разрыв строки в местах переноса" Call("Format::LineFixWrap")
+  "Инвертировать &порядок строк	Ctrl+Alt+R" Call("Format::LineReverse")
   SEPARATOR
-  "Получить уникальные строки" Call("Format::LineGetUnique")
-  "Получить уникальные строки (с учётом регистра)" Call("Format::LineGetUnique", 1)
-  "Получить дублирующиеся строки" Call("Format::LineGetDuplicates")
-  "Получить дублирующиеся строки (с учётом регистра)" Call("Format::LineGetDuplicates", 1)
-  "Удалить дублирующиеся строки" Call("Format::LineRemoveDuplicates")
-  "Удалить дублирующиеся строки (с учётом регистра)" Call("Format::LineRemoveDuplicates", 1)
+  "Получить у&никальные строки" Call("Format::LineGetUnique")
+  "Получить у&никальные строки (с учётом регистра)" Call("Format::LineGetUnique", 1)
+  "Получить &дублирующиеся строки" Call("Format::LineGetDuplicates")
+  "Получить &дублирующиеся строки (с учётом регистра)" Call("Format::LineGetDuplicates", 1)
+  "Удалить д&ублирующиеся строки" Call("Format::LineRemoveDuplicates")
+  "Удалить д&ублирующиеся строки (с учётом регистра)" Call("Format::LineRemoveDuplicates", 1)
   SEPARATOR
-  "Зашифровать выделение (RC4)…" Call("Format::Encrypt")
-  "Расшифровать выделение (RC4)…" Call("Format::Decrypt")
+  "За&шифровать выделение (RC4)…" Call("Format::Encrypt")
+  "Расши&фровать выделение (RC4)…" Call("Format::Decrypt")
   SEPARATOR
-  "Извлечь ссылки из HTML-текста" Call("Format::LinkExtract")
+  "Извлечь &ссылки из HTML-текста" Call("Format::LinkExtract")
 }
 "Выде&ление"
 {
