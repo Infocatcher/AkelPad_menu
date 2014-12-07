@@ -473,6 +473,7 @@ SET(1)
   {
     #UNSET(16)
     -"В&низ влево + 1280x720" Call("Scripts::Main", 1, "moveResizeWindow.js", "-resize=1280*720 -move=left*bottom") Icon("%a\AkelFiles\Plugs\icons\window_align_left-bottom.ico")
+    -"Вн&из влево + 1024x620" Call("Scripts::Main", 1, "moveResizeWindow.js", "-resize=1024*620 -move=left*bottom") Icon("%a\AkelFiles\Plugs\icons\window_align_left-bottom.ico")
     SEPARATOR
     -"Растянуть по &ширине" Call("Scripts::Main", 1, "moveResizeWindow.js", "-resize=100%%* -move=left*") Icon("%a\AkelFiles\Plugs\icons\window_stretch_width.ico")
     -"Растянуть по &высоте" Call("Scripts::Main", 1, "moveResizeWindow.js", "-resize=*100%% -move=*top")  Icon("%a\AkelFiles\Plugs\icons\window_stretch_height.ico")
