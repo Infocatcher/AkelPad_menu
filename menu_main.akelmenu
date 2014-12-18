@@ -350,17 +350,19 @@
     SEPARATOR
     "&Настроить…" Call("Exit::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
   }
-  "&Выделение текста, навигация"
+  "&Выделение текста, навигация" Icon("%a\AkelFiles\Plugs\SmartSel.dll", 0)
   {
     "Умная клавиша &Home" +Call("SmartSel::SmartHome")
-    "     &Инвертировать" +Call("SmartSel::altSmartHome")
+    ;"     &Инвертировать" +Call("SmartSel::altSmartHome")
     "Умная клавиша &End" +Call("SmartSel::SmartEnd")
-    "     Ин&вертировать" +Call("SmartSel::altSmartEnd")
+    ;"     Ин&вертировать" +Call("SmartSel::altSmartEnd")
     "Умные клавиши &Up/Down" +Call("SmartSel::SmartUpDown")
-    "     +&PageUp/PageDown" +Call("SmartSel::altSmartUpDown")
+    ;"     +&PageUp/PageDown" +Call("SmartSel::altSmartUpDown")
     "Исключить EO&L из выделения" +Call("SmartSel::NoSelEOL")
-    "     Только если &одна строка" +Call("SmartSel::altNoSelEOL")
+    ;"     Только если &одна строка" +Call("SmartSel::altNoSelEOL")
     "Умная клавиша &Backspace" +Call("SmartSel::SmartBackspace")
+    SEPARATOR
+    "&Настроить…" Call("SmartSel::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
   }
   SEPARATOR
   "Свернуть в &трей	Alt+M" Call("MinimizeToTray::Now") Icon("%a\AkelFiles\Plugs\MinimizeToTray.dll", 0)
