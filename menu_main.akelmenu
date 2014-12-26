@@ -28,9 +28,9 @@
   {
     RECENTFILES
     SEPARATOR1
-    "Удалить несуществующие" Command(5001) Icon("%a\AkelFiles\Plugs\icons\notebook_minus_Fugue.ico")
-    -"Удалить все" Call("Scripts::Main", 1, "ClearRecentFiles.js") Icon("%a\AkelFiles\Plugs\icons\notebooks_minus_Fugue.ico")
-    -"Управление…	Ctrl+F10" Call("RecentFiles::Manage") Icon("%a\AkelFiles\Plugs\RecentFiles.dll", 0)
+    "Удалить &несуществующие" Command(5001) Icon("%a\AkelFiles\Plugs\icons\notebook_minus_Fugue.ico")
+    -"Удалить &все" Call("Scripts::Main", 1, "ClearRecentFiles.js") Icon("%a\AkelFiles\Plugs\icons\notebooks_minus_Fugue.ico")
+    -"&Управление…	Ctrl+F10" Call("RecentFiles::Manage") Icon("%a\AkelFiles\Plugs\RecentFiles.dll", 0)
   }
   SEPARATOR
   "В&ыход	Esc" Command(4109)
@@ -178,7 +178,7 @@
   {
     LANGUAGES
     SEPARATOR
-    "Внутренний" Command(6001)
+    "&Внутренний" Command(6001)
   }
 }
 
