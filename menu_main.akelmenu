@@ -241,6 +241,8 @@
     "&Псевдо-многооконный (PMDI)" Command(4263)
   }
   SEPARATOR
+  "&Ручные установки…" Call("Scripts::Main", 1, "AkelPadManualSettings.js") Icon("%a\AkelFiles\Plugs\icons\wrench-screwdriver_Fugue.ico")
+  SEPARATOR
   "&Параметры…" Command(4260) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 19)
 }
 
