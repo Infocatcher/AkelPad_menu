@@ -242,6 +242,9 @@
   }
   SEPARATOR
   "&Ручные установки…" Call("Scripts::Main", 1, "AkelPadManualSettings.js") Icon("%a\AkelFiles\Plugs\icons\wrench-screwdriver_Fugue.ico")
+  SET(64, If(`SendMain(1222 /*AKD_GETMAININFO*/, 5 /*MI_SAVESETTINGS*/, 0) == 2 /*SS_INI*/`))
+    "AkelPad.&ini" OpenFile("%a\AkelPad.ini") Icon("%a\AkelFiles\Plugs\icons\notebook-pencil_Fugue.ico")
+  UNSET(64)
   SEPARATOR
   "&Параметры…" Command(4260) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 19)
 }
