@@ -50,6 +50,10 @@
   -"Логический диск текущего файла" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetEditFile(0)));`)
   SEPARATOR
   -"Program Files" Call("Explorer::Main", 1, "%ProgramFiles%")
+  SEPARATOR
+  -"Корневой каталог: текущий" Call("Explorer::Main", 4, "%d")
+  -"Корневой каталог: родительский" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, fso.GetParentFolderName(fso.GetParentFolderName(AkelPad.GetEditFile(0))));`)
+  -"Корневой каталог: мой компьютер" Call("Explorer::Main", 4, "-1")
 }
 
 "SPECIAL_CHAR"
