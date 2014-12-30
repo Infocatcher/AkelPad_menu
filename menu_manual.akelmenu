@@ -38,22 +38,22 @@
 
 "EXPLORE"
 {
-  -"К текущему файлу" Call("Explorer::Main", 1, "")
-  -"К текущей папке" Call("Explorer::Main", 1, "%d")
+  -"К текущему &файлу" Call("Explorer::Main", 1, "")
+  -"К текущей &папке" Call("Explorer::Main", 1, "%d")
   SEPARATOR
-  -"Корень AkelPad'а" Call("Explorer::Main", 1, "%a") Icon("%a\AkelPad.exe", 0)
-  -"Плагины AkelPad'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 18)
-  -"Скрипты AkelPad'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Scripts") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
-  -"Настройки Coder'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Coder") Icon("%a\AkelFiles\Plugs\Coder.dll", 12)
+  -"&Корень AkelPad'а" Call("Explorer::Main", 1, "%a") Icon("%a\AkelPad.exe", 0)
+  -"Пла&гины AkelPad'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 18)
+  -"&Скрипты AkelPad'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Scripts") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
+  -"Настройки &Coder'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Coder") Icon("%a\AkelFiles\Plugs\Coder.dll", 12)
   SEPARATOR
-  -"Логический диск AkelPad'а" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetAkelDir()));`)
-  -"Логический диск текущего файла" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetEditFile(0)));`)
+  -"&Логический диск AkelPad'а" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetAkelDir()));`)
+  -"Логический &диск текущего файла" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetEditFile(0)));`)
   SEPARATOR
-  -"Program Files" Call("Explorer::Main", 1, "%ProgramFiles%")
+  -"&Program Files" Call("Explorer::Main", 1, "%ProgramFiles%")
   SEPARATOR
-  -"Корневой каталог: текущий" Call("Explorer::Main", 4, "%d")
-  -"Корневой каталог: родительский" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, fso.GetParentFolderName(fso.GetParentFolderName(AkelPad.GetEditFile(0))));`)
-  -"Корневой каталог: мой компьютер" Call("Explorer::Main", 4, "-1")
+  -"Корневой каталог: &текущий" Call("Explorer::Main", 4, "%d")
+  -"Корневой каталог: &родительский" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, fso.GetParentFolderName(fso.GetParentFolderName(AkelPad.GetEditFile(0))));`)
+  -"Корневой каталог: &мой компьютер" Call("Explorer::Main", 4, "-1")
 }
 
 "SPECIAL_CHAR"
