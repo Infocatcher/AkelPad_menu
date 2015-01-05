@@ -53,7 +53,8 @@ SEPARATOR
 "Разделить окно вертикально (Ctrl+Shift+|)" Command(4213) Icon(23)
 "Разделить окно горизонтально (Ctrl+Shift+=)" Command(4214) Icon(24)
 
-SET(5) # Hide in SDI and PMDI
+# Hide in SDI and PMDI
+SET(5)
 -"Разместить MDI окна вертикально…" Call("Scripts::Main", 1, "tileTabs.js", 'o -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_vertical_FatCow_mod.ico")
 -"Разместить MDI окна горизонтально…" Call("Scripts::Main", 1, "tileTabs.js", 'h o -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\application_tile_horizontal_FatCow_mod.ico")
 UNSET(5)
