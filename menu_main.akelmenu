@@ -257,7 +257,7 @@
     "&Сворачивание блоков" +Call("Coder::CodeFold") Icon("%a\AkelFiles\Plugs\Coder.dll", 1)
     "&Автодополнение" +Call("Coder::AutoComplete") Icon("%a\AkelFiles\Plugs\Coder.dll", 2)
     SEPARATOR
-    SET(64, If(`Call("Coder::Settings", 2, &nResult) == 1 /*UC_FAST*/`)
+    SET(64, If(`Call("Coder::Settings", 2, &nResult) == 1 /*UC_FAST*/`))
       "&Обновить кэш	Alt+Shift+R" Call("Coder::Settings", 2) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 3)
     UNSET(64)
     -"Конфигурационные &файлы…" +Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Coder\") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
