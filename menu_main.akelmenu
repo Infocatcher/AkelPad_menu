@@ -367,7 +367,7 @@
   -"Показать в панели прово&дника	Ctrl+Alt+E" Call("Explorer::Main", 1, "%f") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
   SEPARATOR
   -"&Сравнить вкладки (WinMerge)…" Call("Scripts::Main", 1, "winMergeTabs.js", '-item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\WinMerge.ico")
-  -"С&равнить вкладки (Total Commander)…" Call("Scripts::Main", 1, "winMergeTabs.js", '-path="%COMMANDER_EXE%|%COMMANDER_PATH%\TOTALCMD.EXE|%AkelDir%\..\TOTALCMD\TOTALCMD.EXE" -cmd="<exe> /S=C <f1> <f2>" -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
+  -"С&равнить вкладки (Total Commander)…" Call("Scripts::Main", 1, "winMergeTabs.js", '-path="%%COMMANDER_EXE%%|%%COMMANDER_PATH%%\TOTALCMD.EXE|%%AkelDir%%\..\TOTALCMD\TOTALCMD.EXE" -cmd="<exe> /S=C <f1> <f2>" -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
   SEPARATOR
   -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
   -"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`)
