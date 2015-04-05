@@ -129,6 +129,7 @@ SEPARATOR
   "&Inno" Call("Coder::Settings", 1, "iss")
   "&JavaScript	Ctrl+Alt+J" Call("Coder::Settings", 1, "js")
   "&Lua" Call("Coder::Settings", 1, "lua")
+  "&MarkDown" Call("Coder::Settings", 1, "md")
   "&NSIS" Call("Coder::Settings", 1, "nsi")
   "&Pascal" Call("Coder::Settings", 1, "dpr")
   "&Perl" Call("Coder::Settings", 1, "pl")
