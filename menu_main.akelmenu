@@ -88,12 +88,14 @@
   "Выде&ление"
   {
     "&Вертикальная вставка	Alt+V" Command(4192)
+    SEPARATOR
     "&Добавить Tab	Tab" Command(4165)
     "&Убрать Tab	Shift+Tab" Command(4167)
     "Д&обавить пробел	Space" Command(4169)
     "У&брать пробел	Shift+Space" Command(4171)
     "Убр&ать первый символ	Shift+Backspace" Command(4173)
     "Убра&ть Tab'ы и пробелы в конце	Alt+Backspace" Command(4174)
+    "Убрать Tab'ы и пробелы в выделении" Command(4195)
     SEPARATOR
     "ВСЕ &ПРОПИСНЫЕ	Ctrl+6" Command(4175)
     "все &строчные	Ctrl+7" Command(4176)
