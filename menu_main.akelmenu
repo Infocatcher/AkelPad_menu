@@ -53,16 +53,7 @@
   SEPARATOR
   "&Вырезать	Ctrl+X" Command(4153) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 7)
   "&Копировать	Ctrl+C" Command(4154) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-  "Копировать…" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-  {
-    "С &форматированием" Call("Coder::Settings", 4, 65584) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-    SEPARATOR
-    -"&BBCode" Call("Scripts::Main", 1, "CodePoster.js", '-Format="BBCode" -BR="" -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-    -"&XHTML strict: <span>, <br/>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br/>" -Strict=true -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-    -"&HTML strict: <span>, <br>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br>" -Strict=true -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-    #-"XHTML: <font>, <br/>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br/>" -Strict=false -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-    -"&HTML: <font>, <br>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br>" -Strict=false -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-  }
+  "Копировать…" Menu("COPY") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   "Вст&авить	Ctrl+V" Command(4155) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 9)
   "&Удалить	Del" Command(4156)  Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
   "В&ыделить всё	Ctrl+A" Command(4157)
