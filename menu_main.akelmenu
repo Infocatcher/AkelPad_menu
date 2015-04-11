@@ -48,14 +48,14 @@
     -"От&менить до сохранённого состояния" Call("Scripts::Main", 1, "undoRedoAll.js", "-mode=0 -stopOnSaved=true") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 10)
     -"По&вторить до сохранённого состояния" Call("Scripts::Main", 1, "undoRedoAll.js", "-mode=1 -stopOnSaved=true") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 11)
     SEPARATOR
-    -"О&чистить" Call("Scripts::Main", 1, "EvalCmd.js", `'var hWndEdit = AkelPad.GetEditWnd(); AkelPad.SendMessage(hWndEdit, 3087 /*AEM_SETMODIFY*/, 0, 0); AkelPad.SendMessage(hWndEdit, 3079 /*AEM_EMPTYUNDOBUFFER*/, 0, 0);'`) Icon("%a\AkelFiles\Plugs\icons\cross_Diagona.ico")
+    -"О&чистить" Call("Scripts::Main", 1, "EvalCmd.js", `'var hWndEdit = AkelPad.GetEditWnd(); AkelPad.SendMessage(hWndEdit, 3087 /*AEM_SETMODIFY*/, 0, 0); AkelPad.SendMessage(hWndEdit, 3079 /*AEM_EMPTYUNDOBUFFER*/, 0, 0);'`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
   }
   SEPARATOR
   "&Вырезать	Ctrl+X" Command(4153) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 7)
   "&Копировать	Ctrl+C" Command(4154) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   "Копировать…" Menu("COPY") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   "Вст&авить	Ctrl+V" Command(4155) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 9)
-  "&Удалить	Del" Command(4156)  Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
+  "&Удалить	Del" Command(4156) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
   "В&ыделить всё	Ctrl+A" Command(4157)
   SEPARATOR
   "Найт&и…	Ctrl+F" Command(4158) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 12)
