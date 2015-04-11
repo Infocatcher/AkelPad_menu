@@ -431,15 +431,7 @@ SET(1)
 
   SEPARATOR
   "&Закрыть	Ctrl+W" Command(4318)
-  "Закр&ыть…"
-  {
-    "&Другие	Ctrl+Shift+W" Command(4320)
-    -"С&лева" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js", "-left")
-    -"Спр&ава" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js")
-    SEPARATOR
-    "&Все	Ctrl+Alt+F4" Command(4319)
-    "Все &неизменённые"	Command(4321)
-  }
+  "Закр&ыть…" Menu("CLOSE")
 
   #SEPARATOR
   -"&Список…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -WindowLeft=-2 -WindowTop=-2`)  Icon("%a\AkelFiles\Plugs\icons\notebooks_Fugue.ico")

@@ -6,15 +6,7 @@ SEPARATOR
 "&Новая вкладка	Ctrl+N" Command(4101) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 0)
 "&Закрыть вкладку	Ctrl+W" Command(4318)
 -"Забыть об этой вкладке" Call("Scripts::Main", 1, "forgetAboutTab.js") Icon("%a\AkelFiles\Plugs\icons\tab_delete_FatCow.ico")
-"Закр&ыть…"
-{
-  "&Другие	Ctrl+Shift+W" Command(4320)
-  -"С&лева" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js", "-left")
-  -"Спр&ава" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js")
-  SEPARATOR
-  "&Все	Ctrl+Alt+F4" Command(4319)
-  "Все &неизменённые"	Command(4321)
-}
+"Закр&ыть…" Menu("CLOSE")
 
 # Только для MDI
 SET(4)

@@ -143,3 +143,13 @@
   #-"XHTML: <font>, <br/>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br/>" -Strict=false -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   -"&HTML: <font>, <br>" Call("Scripts::Main", 1, "CodePoster.js", '-Format="HTML" -BR="<br>" -Strict=false -Enclose="" -Info=false') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
 }
+
+"CLOSE"
+{
+  "&Другие	Ctrl+Shift+W" Command(4320)
+  -"С&лева" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js", "-left")
+  -"Спр&ава" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js")
+  SEPARATOR
+  "&Все	Ctrl+Alt+F4" Command(4319)
+  "Все &неизменённые"	Command(4321)
+}
