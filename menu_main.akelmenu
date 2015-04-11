@@ -85,26 +85,7 @@
     -"гггг-мм-дд чч:&мм	Ctrl+Alt+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
     -"гггг-мм-дд чч:мм:&сс" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm:ss"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
   }
-  "Выде&ление"
-  {
-    "&Вертикальная вставка	Alt+V" Command(4192)
-    SEPARATOR
-    "&Добавить Tab	Tab" Command(4165)
-    "&Убрать Tab	Shift+Tab" Command(4167)
-    "Д&обавить пробел	Space" Command(4169)
-    "У&брать пробел	Shift+Space" Command(4171)
-    "Убр&ать первый символ	Shift+Backspace" Command(4173)
-    "Убра&ть Tab'ы и пробелы в конце	Alt+Backspace" Command(4174)
-    "Убрать Tab'ы и пробелы в выделении" Command(4195)
-    SEPARATOR
-    "ВСЕ &ПРОПИСНЫЕ	Ctrl+6" Command(4175)
-    "все &строчные	Ctrl+7" Command(4176)
-    "&Как в предложениях.	Ctrl+8" Command(4177)
-    "&Начинать С Прописных	Ctrl+9" Command(4178)
-    "&иНВЕРТИРОВАТЬ	Ctrl+0" Command(4179)
-    SEPARATOR
-    "Перекодироват&ь…	Alt+R" Command(4182)
-  }
+  "Выде&ление" Menu("SELECTION")
   "&Формат новой строки"
   {
     "DOS/Windows (0Dh, 0Ah)" Command(4184)
