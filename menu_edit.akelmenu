@@ -91,7 +91,7 @@ SEPARATOR
   SEPARATOR
   "&Настроить…" Call("Scroll::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
 }
-"С&интаксис" Index(-1) Menu("SYNTAX") Icon("%a\AkelFiles\Plugs\Coder.dll", 4)
+"С&интаксис" Menu("SYNTAX") Icon("%a\AkelFiles\Plugs\Coder.dll", 4)
 "От&метить" Icon("%a\AkelFiles\Plugs\Coder.dll", 0)
 {
   "От&метить зелёным	Ctrl+Q" Call("Coder::HighLight", 2, 0, "#BCF3BC", 1, 0, -1) Icon("%a\AkelFiles\Plugs\icons\highlight_#bcf3bc_green.ico")
