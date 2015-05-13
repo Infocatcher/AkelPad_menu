@@ -17,5 +17,8 @@ SEPARATOR
 -"Google &Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%u"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
 -"&Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%u"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
 
+SEPARATOR
+"Контекстное &меню" Menu("EDITOR_CONTEXT")
+
 #SEPARATOR
 #-"&Редактировать это меню…" Call("ContextMenu::Main", 1, 4)
