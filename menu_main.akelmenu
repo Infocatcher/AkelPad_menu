@@ -58,11 +58,14 @@
   "&Удалить	Del" Command(4156) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
   "В&ыделить всё	Ctrl+A" Command(4157)
   SEPARATOR
-  "Найт&и…	Ctrl+F" Command(4158) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 12)
+  #"Найт&и…	Ctrl+F" Command(4158) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 12)
+  "Найт&и…	Ctrl+F" Call("Scripts::Main", 1, "FindReplaceEx.js", '-dlg="F"') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 12)
   "Найти далее в&низ	F3" Command(4159)
   "Найти далее ввер&х	Shift+F3" Command(4160)
-  "&Заменить…	Ctrl+H" Command(4161) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 13)
-  "&Перейти к строке…	Ctrl+G" Command(4162)
+  #"&Заменить…	Ctrl+H" Command(4161) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 13)
+  "&Заменить…	Ctrl+H" Call("Scripts::Main", 1, "FindReplaceEx.js", '-dlg="R"') Icon("%a\AkelFiles\Plugs\ToolBar.dll", 13)
+  #"&Перейти к строке…	Ctrl+G" Command(4162)
+  "&Перейти к строке…	Ctrl+G" Call("Scripts::Main", 1, "FindReplaceEx.js", '-dlg="G"')
   SEPARATOR
   -"Поиск и замена в фа&йлах…" Call("Scripts::Main", 1, "FindReplaceFiles.js") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 12)
   -"&Регулярные выражения…	Ctrl+Shift+H" Call("Scripts::Main", 1, "SearchReplace.js") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 13)
