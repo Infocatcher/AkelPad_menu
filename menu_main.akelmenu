@@ -324,7 +324,7 @@
 
 "&Инструменты" Index(-1)
 {
-  "Открыть в ассо&циированной программе" Exec(`rundll32.exe shell32.dll,ShellExec_RunDLL "%f"`) Icon("%a\AkelFiles\Plugs\icons\external_Fugue.ico")
+  "Открыть в ассо&циированной программе" Exec(`rundll32.exe shell32.dll,ShellExec_RunDLL "%f"`, "%d") Icon("%a\AkelFiles\Plugs\icons\external_Fugue.ico")
   SEPARATOR
   -"Internet &Explorer" Call("Scripts::Main", 1, "openFileIn.js", '"Internet Explorer" "%f"') Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
   -"Mozilla &Firefox" Call("Scripts::Main", 1, "openFileIn.js", '"Firefox" "%f"') Icon("%a\AkelFiles\Plugs\icons\firefox.ico")

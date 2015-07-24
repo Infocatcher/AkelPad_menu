@@ -20,7 +20,7 @@ SEPARATOR
 UNSET(4)
 
 SEPARATOR
-"Открыть в ассо&циированной программе" Exec(`rundll32.exe shell32.dll,ShellExec_RunDLL "%f"`) Icon("%a\AkelFiles\Plugs\icons\external_Fugue.ico")
+"Открыть в ассо&циированной программе" Exec(`rundll32.exe shell32.dll,ShellExec_RunDLL "%f"`, "%d") Icon("%a\AkelFiles\Plugs\icons\external_Fugue.ico")
 "Открыть в другом &редакторе" Icon("%a\AkelFiles\Plugs\icons\notepad.ico")
 {
   -"&Блокнот" Call("Scripts::Main", 1, "openFileIn.js", '"Notepad" "%f"') Icon("%a\AkelFiles\Plugs\icons\notepad.ico")
