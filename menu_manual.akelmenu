@@ -202,6 +202,7 @@
   "&Batch" Call("Coder::Settings", 1, "bat")
   "&C++" Call("Coder::Settings", 1, "cpp")
   "&CSS	Ctrl+Alt+C" Call("Coder::Settings", 1, "css")
+  "&Diff" Call("Coder::Settings", 1, "diff")
   "&HTML	Ctrl+Alt+H" Call("Coder::Settings", 1, "html")
   "&INI	Ctrl+Alt+I" Call("Coder::Settings", 1, "ini")
   "&Inno" Call("Coder::Settings", 1, "iss")
