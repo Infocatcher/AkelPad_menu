@@ -223,11 +223,12 @@
   "&XML	Ctrl+Alt+X" Call("Coder::Settings", 1, "xml")
   "&XUL	Ctrl+Alt+U" Call("Coder::Settings", 1, "xul")
   "chrome.&manifest" Call("Coder::Settings", 1, "manifest")
-  "Меню &AkelPad'а" Call("Coder::Settings", 1, "akelmenu")
-  "Настройки пла&гина Coder" Call("Coder::Settings", 1, "coder")
+  SEPARATOR
+  "AkelPad: &меню" Call("Coder::Settings", 1, "akelmenu")
+  "AkelPad: &coder-файлы" Call("Coder::Settings", 1, "coder")
   SEPARATOR
   "Простой &текст	Ctrl+Alt+T" Call("Coder::Settings", 1, "txt")
-  "&Без темы" Call("Coder::Settings", 1, "?")
+  "&Без подсветки" Call("Coder::Settings", 1, "?")
   SEPARATOR
   -"&Восстановить" Call("Scripts::Main", 1, "highlighter.js", "-restore")
   -"В&ыбрать…	Alt+Shift+H" Call("Scripts::Main", 1, "highlighter.js")
