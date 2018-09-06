@@ -76,8 +76,8 @@ SEPARATOR
 #"Подсветка синтаксиса" +Call("Coder::HighLight") Icon("%a\AkelFiles\Plugs\Coder.dll", 0)
 #"Сворачивание блоков" +Call("Coder::CodeFold") Icon("%a\AkelFiles\Plugs\Coder.dll", 1)
 
-#-"Сворачивание блоков: показать/скрыть список" Call("Coder::CodeFold", 1) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
--"Сворачивание блоков: показать/скрыть список" Call("Scripts::Main", 1, "EvalCmd.js", `'var cf = "Coder::CodeFold"; if(AkelPad.IsPluginRunning(cf)) AkelPad.Call(cf, 1); else AkelPad.Call(cf);'`) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
+#"Сворачивание блоков: показать/скрыть список" Call("Coder::CodeFold", 1) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
+-"Сворачивание блоков: показать/скрыть список" Call("Scripts::Main", 1, "EvalCmd.js", `'var cf = "Coder::CodeFold"; if(!AkelPad.IsPluginRunning(cf)) AkelPad.Call(cf); AkelPad.Call(cf, 1);'`) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
 
 #"Автодополнение" +Call("Coder::AutoComplete") Icon("%a\AkelFiles\Plugs\Coder.dll", 2)
 
