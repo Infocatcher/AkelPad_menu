@@ -54,9 +54,11 @@
     -"Вычислить &хэш-сумму…" Call("Scripts::Main", 1, "getHash.js") Icon("%a\AkelFiles\Plugs\icons\sum_FatCow.ico")
     -"&Шифрование (AES-256/Blowfish)…" Call("Scripts::Main", 1, "crypt.js") Icon("%a\AkelFiles\Plugs\icons\lock_FatCow.ico")
     -"&Шифрование+ (AES-256/Blowfish/Twofish/Serpent)…" Call("Scripts::Main", 1, "cryptExt.js") Icon("%a\AkelFiles\Plugs\icons\lock_add_FatCow.ico")
+    SEPARATOR
     -"&Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
     -"Переко&дировать в текущую кодировку" Call("Scripts::Main", 1, "converter.js", `-mode=2 -type="Charset" -codePage=-1 -dialog=false -saveOptions=0`)
     -"Переко&дировать из текущей кодировки" Call("Scripts::Main", 1, "converter.js", `-mode=1 -type="Charset" -codePage=-1 -dialog=false -saveOptions=0`)
+    SEPARATOR
     -"Конвертер &величин" Call("Scripts::Main", 1, "measuresConverter.js")
     -"Заменить &табы пробелами" Call("Scripts::Main", 1, "TabsToSpaces_mod.js")
     -"JS &Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js")
