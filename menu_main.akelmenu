@@ -5,7 +5,8 @@
 "&Файл" Index(-1)
 {
   "&Новый	Ctrl+N" Command(4101) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 0)
-  "Созд&ать окно	Ctrl+Shift+N" Command(4102) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 1)
+  #"Созд&ать окно	Ctrl+Shift+N" Command(4102) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 1)
+  "Созд&ать окно	Ctrl+Alt+N" Call("Scripts::Main", 1, "ForceNewInstance.js") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 1)
   "&Открыть…	Ctrl+O" Command(4103) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 2)
   "&Переоткрыть	F5" Command(4104) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 3)
   SEPARATOR

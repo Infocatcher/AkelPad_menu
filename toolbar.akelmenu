@@ -1,5 +1,7 @@
 ﻿"Новый (Ctrl+N)" Command(4101) Icon(0)
 #"Создать окно (Ctrl+Shift+N)" Command(4102) Icon(1)
+"Создать окно (Ctrl+Alt+N)" Call("Scripts::Main", 1, "ForceNewInstance.js") Icon(1)
+
 "Открыть… (Ctrl+O)" Command(4103) Icon(2)
 # Только для MDI и PMDI
 SET(1)
