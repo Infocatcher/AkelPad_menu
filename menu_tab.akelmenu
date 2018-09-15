@@ -1,6 +1,7 @@
 ﻿# Системная тема оформления без иконок
 #SET(16)
 
+-"&Список…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -WindowLeft=-2 -WindowTop=-2`)  Icon("%a\AkelFiles\Plugs\icons\notebooks_Fugue.ico")
 "Выбор &окна…	F10" Command(10019)
 SEPARATOR
 "&Новая вкладка	Ctrl+N" Command(4101) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 0)
