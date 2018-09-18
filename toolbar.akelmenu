@@ -97,7 +97,9 @@ SEPARATOR
 #-"Плагин Hotkeys" +Call("Hotkeys::Main") Icon("%a\AkelFiles\Plugs\Hotkeys.dll", 0)
 #"Запустить Notepad" Exec("notepad.exe") Icon("notepad.exe")
 
--"Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
+SET(128, If(`Call("Scripts::Main", 5, "converter.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
+  "Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
+UNSET(128)
 
 #SEPARATOR
 #"Главное меню" Call("ContextMenu::Show", 2, "%bl", "%bb") Icon(38)
