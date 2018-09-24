@@ -438,7 +438,7 @@ SET(1)
   "Закр&ыть…" Menu("CLOSE")
 
   #SEPARATOR
-  -"&Список…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -WindowLeft=-2 -WindowTop=-2`)  Icon("%a\AkelFiles\Plugs\icons\notebooks_Fugue.ico")
+  -"&Список…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -FontName="Tahoma" -FontSize=9 -SingleClick=true -ShowModify=2 -WindowLeft=-2 -WindowTop=-2`) Icon("%a\AkelFiles\Plugs\icons\notebooks_Fugue.ico")
 
   # Только для MDI
   SET(4)

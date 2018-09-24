@@ -6,7 +6,7 @@
 "Открыть… (Ctrl+O)" Command(4103) Icon(2)
 # Только для MDI и PMDI
 SET(1)
--"Список окон…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -SingleClick=true -WindowLeft=%bl -WindowTop=%bb`) Icon("%a\AkelFiles\Plugs\icons\notebooks_Fugue.ico")
+-"Список окон…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -FontName="Tahoma" -FontSize=9 -SingleClick=true -ShowModify=2 -WindowLeft=%bl -WindowTop=%bb`) Icon("%a\AkelFiles\Plugs\icons\notebooks_Fugue.ico")
 UNSET(1)
 "Переоткрыть (F5)" Command(4104) Icon(3)
 
