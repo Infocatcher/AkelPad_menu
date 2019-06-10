@@ -169,7 +169,7 @@
   SEPARATOR
   "Со&хранять отступы слева	Ctrl+L" Command(4254)
   "Следить за &изменением файла" Command(4253)
-  "&Сохранять время файла" Command(4252)
+  "&Не менять время файла" Command(4252)
   "Не открывать ф&айл дважды" Command(4255)
 
   # Только для MDI и PMDI
@@ -256,7 +256,7 @@
   SEPARATOR
   "&Буфер обмена" Icon("%a\AkelFiles\Plugs\Clipboard.dll", 0)
   {
-    "&Захват" +Call("Clipboard::Capture")
+    "&Захват" Call("Clipboard::Capture")
     "Вставка &серийного номера" Call("Clipboard::PasteSerial")
     SEPARATOR
     "&Автоматическое копирование выделения" +Call("Clipboard::SelAutoCopy")
