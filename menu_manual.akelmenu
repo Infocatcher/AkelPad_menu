@@ -175,7 +175,13 @@
   -"&Program Files" Call("Explorer::Main", 1, "%ProgramFiles%")
   SEPARATOR
   -"Корневой каталог: &текущий" Call("Explorer::Main", 4, "%d")
-  -"Корневой каталог: &родительский" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, fso.GetParentFolderName(fso.GetParentFolderName(AkelPad.GetEditFile(0))));`)
+ # -"Корневой каталог: &родительский" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, fso.GetParentFolderName(fso.GetParentFolderName(AkelPad.GetEditFile(0))));`)
+  -"Корневой каталог: родительский (&1)" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, up(AkelPad.GetEditFile(0), 2)); function up(f, u) { while(f && u--) f = fso.GetParentFolderName(f); return f; }`)
+  -"Корневой каталог: родительский (&2)" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, up(AkelPad.GetEditFile(0), 3)); function up(f, u) { while(f && u--) f = fso.GetParentFolderName(f); return f; }`)
+  -"Корневой каталог: родительский (&3)" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, up(AkelPad.GetEditFile(0), 4)); function up(f, u) { while(f && u--) f = fso.GetParentFolderName(f); return f; }`)
+  -"Корневой каталог: родительский (&4)" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, up(AkelPad.GetEditFile(0), 5)); function up(f, u) { while(f && u--) f = fso.GetParentFolderName(f); return f; }`)
+  -"Корневой каталог: родительский (&5)" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, up(AkelPad.GetEditFile(0), 6)); function up(f, u) { while(f && u--) f = fso.GetParentFolderName(f); return f; }`)
+  SEPARATOR
   -"Корневой каталог: &мой компьютер" Call("Explorer::Main", 4, "-1")
 }
 
@@ -275,6 +281,9 @@
   "&Другие	Ctrl+Shift+W" Command(4320)
   -"С&лева" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js", "-left")
   -"Спр&ава" Call("Scripts::Main", 1, "closeLeftOrRightTabs.js")
+  SEPARATOR
+  -"Пустые несо&хранённые" Call("Scripts::Main", 1, "closeUnsavedTabs.js", "-onlyEmpty=true -askToSave=false -closeCurrent=true")
+  -"Все несох&ранённые" Call("Scripts::Main", 1, "closeUnsavedTabs.js", "-onlyEmpty=false -askToSave=true -closeCurrent=true -stopOnCancel=false")
   SEPARATOR
   "&Все	Ctrl+Alt+F4" Command(4319)
   "Все &неизменённые"	Command(4321)

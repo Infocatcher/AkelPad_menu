@@ -1,4 +1,5 @@
-﻿#"Главное меню" Call("ContextMenu::Show", 2, "-6", "-6") Icon(38)
+﻿#"Главное меню" Call("ContextMenu::Show", 2, "%bl", "%bb") Icon(38)
+
 "Новый (Ctrl+N)" Command(4101) Icon(0)
 #"Создать окно (Ctrl+Shift+N)" Command(4102) Icon(1)
 "Создать окно (Ctrl+Alt+N)" Call("Scripts::Main", 1, "ForceNewInstance.js") Icon(1)
@@ -100,6 +101,3 @@ SEPARATOR
 SET(128, If(`Call("Scripts::Main", 5, "converter.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
   "Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
 UNSET(128)
-
-#SEPARATOR
-#"Главное меню" Call("ContextMenu::Show", 2, "%bl", "%bb") Icon(38)

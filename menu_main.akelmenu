@@ -78,7 +78,7 @@
     "По &умолчанию" Command(4183) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
     -"гггг-мм-&дд	Ctrl+Shift+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
     -"гггг-мм-дд чч:&мм	Ctrl+Alt+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
-    -"гггг-мм-дд чч:мм:&сс" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm:ss"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+    -"гггг-мм-дд чч:мм:&сс	Ctrl+Alt+Shift+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm:ss"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
   }
   "Выде&ление" Menu("SELECTION")
   "&Формат новой строки"
@@ -222,7 +222,7 @@
   {
     "&Включить	Ctrl+Shift+L" +Call("LineBoard::Main")
     -"Показать/скрыть п&анель" Call("LineBoard::Main", 4)
-    -"Показать/скрыть &линейку" Call("LineBoard::Main", 3, 17)
+    -"Показать/скрыть &линейку" Call("LineBoard::Main", 3, 18)
     SEPARATOR
     #"Список &закладок	Alt+Home" Call("LineBoard::Main::BookmarkList")
     #"Перейти к &следующей закладке	Alt+PageDown" Call("LineBoard::Main::NextBookmark") Icon(4)
