@@ -348,12 +348,12 @@
   -"С&равнить вкладки в Total Commander…" Call("Scripts::Main", 1, "winMergeTabs.js", '-path="%%COMMANDER_EXE%%|%%COMMANDER_PATH%%\TOTALCMD.EXE|%%AkelDir%%\..\TOTALCMD\TOTALCMD.EXE" -cmd="<exe> /S=C <f1> <f2>" -item="%m:%i"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
   SEPARATOR
   -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
-  -"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`)
-  "&Копировать…"
+  -"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  "&Копировать…" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   {
-    -"&Путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`)
-    -"П&уть к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`)
-    -"Имя файла без рас&ширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`)
+    -"&Путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"П&уть к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"Имя файла без рас&ширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   }
   SEPARATOR
   "Меню &проводника" Icon("%a\AkelFiles\Plugs\icons\explorer_files.ico")
