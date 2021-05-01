@@ -319,7 +319,7 @@
   "Свернуть в &трей	Alt+M" Call("MinimizeToTray::Now") Icon("%a\AkelFiles\Plugs\MinimizeToTray.dll", 0)
   "Сворачивать в т&рей всегда" +Call("MinimizeToTray::Always")
   "Быстрое переключение &диалогов" +Call("QSearch::DialogSwitcher") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 34)
-  "Машинное &чтение текста" +Call("Speech::Main") Icon("%a\AkelFiles\Plugs\Speech.dll", 0)
+  "Машинное &чтение текста" Call("Speech::Main") Icon("%a\AkelFiles\Plugs\Speech.dll", 0)
   "Зв&уковой набор текста" +Call("Sounds::Main") Icon("%a\AkelFiles\Plugs\Sounds.dll", 0)
 }
 
