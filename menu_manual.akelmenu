@@ -91,6 +91,7 @@
     "&Вертикальная синхронизация" Call("Scroll::SyncVert") Icon("%a\AkelFiles\Plugs\Scroll.dll", 1)
     SEPARATOR
     "&Автоматическая прокрутка текста" +Call("Scroll::AutoScroll") Icon("%a\AkelFiles\Plugs\Scroll.dll", 2)
+    SEPARATOR
     "&Обработка непрокручиваемых операций" +Call("Scroll::NoScroll") Icon("%a\AkelFiles\Plugs\Scroll.dll", 3)
     "Вы&равнивание каретки" +Call("Scroll::AlignCaret") Icon("%a\AkelFiles\Plugs\Scroll.dll", 4)
     "Авто&фокус и прокрутка вкладок" +Call("Scroll::AutoFocus") Icon("%a\AkelFiles\Plugs\Scroll.dll", 5)
