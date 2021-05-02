@@ -5,6 +5,7 @@
 "Выбор &окна…	F10" Command(10019)
 SEPARATOR
 "&Новая вкладка	Ctrl+N" Command(4101) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 0)
+SEPARATOR
 "&Закрыть вкладку	Ctrl+W" Command(4318)
 -"Забыть об этой вкладке" Call("Scripts::Main", 1, "forgetAboutTab.js") Icon("%a\AkelFiles\Plugs\icons\tab_delete_FatCow.ico")
 "Закр&ыть…" Menu("CLOSE")
