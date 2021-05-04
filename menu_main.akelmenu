@@ -285,7 +285,14 @@
   SEPARATOR
   -"&Скрипты…	Ctrl+J" +Call("Scripts::Main") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
   -"&Макросы…	Ctrl+M" +Call("Macros::Main") Icon("%a\AkelFiles\Plugs\Macros.dll", 0)
-  -"С&ессии…	Alt+O" +Call("Sessions::Main") Icon("%a\AkelFiles\Plugs\Sessions.dll", 0)
+  -"С&ессии" Icon("%a\AkelFiles\Plugs\Sessions.dll", 0)
+  {
+    -"Управление с&ессиями…	Alt+O" +Call("Sessions::Main") Icon("%a\AkelFiles\Plugs\Sessions.dll", 0)
+    SEPARATOR
+    "Со&хранить текущую сессию: OnExit	Alt+S" Call("Sessions::Main", 2, "OnExit")
+    "Открыть &предыдущую сессию: OnExit	Ctrl+Shift+O" Call("Sessions::Main", 1, "OnExit")
+    "Открыть п&редыдущую сессию: AutoSave" Call("Sessions::Main", 1, "AutoSave")
+  }
   -"Последние фа&йлы…" Call("RecentFiles::Manage") Icon("%a\AkelFiles\Plugs\RecentFiles.dll", 0)
   "&Шаблоны" Icon("%a\AkelFiles\Plugs\Toolbar.dll", 37)
   {
