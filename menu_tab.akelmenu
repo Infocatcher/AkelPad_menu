@@ -37,8 +37,9 @@ SEPARATOR
   -"Internet &Explorer" Call("Scripts::Main", 1, "openFileIn.js", '"Internet Explorer" "%f"') Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
   -"Mozilla &Firefox" Call("Scripts::Main", 1, "openFileIn.js", '"Firefox" "%f"') Icon("%a\AkelFiles\Plugs\icons\firefox.ico")
   -"&Opera" Call("Scripts::Main", 1, "openFileIn.js", '"Opera" "%f"') Icon("%a\AkelFiles\Plugs\icons\opera.ico")
+  -"&Vivaldi" Call("Scripts::Main", 1, "openFileIn.js", '"Vivaldi" "%f"') Icon("%a\AkelFiles\Plugs\icons\vivaldi.ico")
   -"Google &Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%f"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
-  -"&Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%f"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
+  #-"&Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%f"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
 }
 SEPARATOR
 "&Открыть папку в проводнике" Exec(`explorer /e, /select, "%f"`) Icon("%a\AkelFiles\Plugs\icons\explorer.ico")
