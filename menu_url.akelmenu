@@ -11,7 +11,7 @@ SEPARATOR
 "В&ыделить ссылку" Link(3)
 
 SEPARATOR
-INCLUDE("OPEN_IN_BROWSER_LINK")
+INCLUDE("OPEN_IN_BROWSER")
 
 SEPARATOR
 "Контекстное &меню" Menu("EDITOR_CONTEXT")
