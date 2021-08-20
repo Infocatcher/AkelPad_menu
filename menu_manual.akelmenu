@@ -293,3 +293,20 @@
   -"Google &Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
   #-"&Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
 }
+
+"FILE_OPERATIONS"
+{
+  -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
+  -"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  "&Копировать…" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  {
+    -"&Путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"П&уть к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"Имя файла без рас&ширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  }
+  SEPARATOR
+  "Меню &проводника" Icon("%a\AkelFiles\Plugs\icons\explorer_files.ico")
+  {
+    EXPLORER
+  }
+}

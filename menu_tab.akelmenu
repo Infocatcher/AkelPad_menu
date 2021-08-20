@@ -30,16 +30,4 @@ SEPARATOR
 -"Открыть папку в &Total Commander" Call("Scripts::Main", 1, "openFileIn.js", '"Total Commander" "%f\:"') Icon("%a\AkelFiles\Plugs\icons\total_commander.ico")
 -"Показать в панели проводника	Ctrl+Alt+E" Call("Explorer::Main", 1, "%f") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
 SEPARATOR
--"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
--"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`)
-"&Копировать…"
-{
-  -"&Путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`)
-  -"П&уть к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`)
-  -"Имя файла без рас&ширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`)
-}
-SEPARATOR
-"Меню &проводника" Icon("%a\AkelFiles\Plugs\icons\explorer_files.ico")
-{
-  EXPLORER
-}
+INCLUDE("FILE_OPERATIONS")
