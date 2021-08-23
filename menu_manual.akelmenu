@@ -287,11 +287,11 @@
 "OPEN_IN_BROWSER"
 {
   -"Internet &Explorer" Call("Scripts::Main", 1, "openFileIn.js", '"Internet Explorer" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\internet_explorer.ico")
-  -"Mozilla &Firefox" Call("Scripts::Main", 1, "openFileIn.js", '"Firefox" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\firefox.ico")
+  -"&Firefox" Call("Scripts::Main", 1, "openFileIn.js", '"Firefox" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\firefox.ico")
   -"&Basilisk" Call("Scripts::Main", 1, "openFileIn.js", '"Basilisk" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\basilisk.ico")
   -"&Opera" Call("Scripts::Main", 1, "openFileIn.js", '"Opera" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\opera.ico")
   -"&Vivaldi" Call("Scripts::Main", 1, "openFileIn.js", '"Vivaldi" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\vivaldi.ico")
-  -"Google &Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
+  -"&Chrome" Call("Scripts::Main", 1, "openFileIn.js", '"Google Chrome" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\google_chrome.ico")
   #-"&Safari" Call("Scripts::Main", 1, "openFileIn.js", '"Safari" "%f" "%u"') Icon("%a\AkelFiles\Plugs\icons\safari.ico")
 }
 
