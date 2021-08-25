@@ -1,7 +1,7 @@
 ﻿# Системная тема оформления без иконок
 #SET(16)
 
-"&Открыть ссылку" Link(1)
+"&Открыть ссылку" Link(1) Icon("%a\AkelFiles\Plugs\icons\external_Fugue.ico")
 
 SEPARATOR
 "&Вырезать ссылку" Link(4) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 7)
