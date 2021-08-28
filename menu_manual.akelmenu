@@ -41,7 +41,8 @@
     "За&шифровать выделение (RC4)…" Call("Format::Encrypt")
     "Расши&фровать выделение (RC4)…" Call("Format::Decrypt")
     SEPARATOR
-    "Извлечь &ссылки из HTML-текста" Call("Format::LinkExtract")
+    "Извлечь ссылки из &HTML-текста" Call("Format::LinkExtract")
+    -"Извлечь все &ссылки" Call("Scripts::Main", 1, "getLinks.js")
   }
   "Выде&ление" Menu("SELECTION")
   "&Скрипты" Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
