@@ -17,7 +17,7 @@
   UNSET(8)
   SEPARATOR
   "Правописание" Call("SpellCheck::Suggest") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 35)
-  "&Преобразовать"
+  "&Преобразовать" Icon("%a\AkelFiles\Plugs\icons\text_exports_FatCow.ico")
   {
     "Сортировать строки по &возрастанию	Ctrl+Alt+A" Call("Format::LineSortStrAsc") Icon("%a\AkelFiles\Plugs\Format.dll", 0)
     "Сортировать строки по &возрастанию (с учётом регистра)" Call("Format::LineSortStrAsc", 1) Icon("%a\AkelFiles\Plugs\Format.dll", 0)
