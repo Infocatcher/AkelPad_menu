@@ -44,7 +44,7 @@
     "Извлечь ссылки из &HTML-текста" Call("Format::LinkExtract")
     -"Извлечь все &ссылки" Call("Scripts::Main", 1, "getLinks.js")
   }
-  "Выде&ление" Menu("SELECTION")
+  "Выде&ление" Menu("SELECTION") Icon("%a\AkelFiles\Plugs\icons\document_inspect_FatCow.ico")
   "&Скрипты" Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
   {
     -"&Последний вызванный" Call("Scripts::Main", 1, "")

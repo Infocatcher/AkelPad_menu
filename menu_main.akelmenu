@@ -80,7 +80,7 @@
     -"гггг-мм-дд чч:&мм	Ctrl+Alt+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
     -"гггг-мм-дд чч:мм:&сс	Ctrl+Alt+Shift+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm:ss"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
   }
-  "Выде&ление" Menu("SELECTION")
+  "Выде&ление" Menu("SELECTION") Icon("%a\AkelFiles\Plugs\icons\document_inspect_FatCow.ico")
   "&Формат новой строки"
   {
     "DOS/Windows (0Dh, 0Ah)" Command(4184)
