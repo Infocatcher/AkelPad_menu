@@ -302,9 +302,9 @@
   -"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   "&Копировать…" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   {
-    -"&Путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-    -"П&уть к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-    -"Имя файла без рас&ширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"&Путь к файлу	x:\dir\name.ext" Call("Scripts::Main", 1, "copyPath.js", `"%f"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"П&уть к папке	x:\dir" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+    -"Имя файла без рас&ширения	name"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   }
   SEPARATOR
   "Меню &проводника" Icon("%a\AkelFiles\Plugs\icons\explorer_files.ico")

@@ -17,10 +17,10 @@ SEPARATOR1
   SEPARATOR
   -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
   SEPARATOR
-  -"Копировать и&мя файла"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-  -"Копировать &путь к файлу" Call("Scripts::Main", 1, "copyPath.js", `"%f"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-  -"Копировать п&уть к папке" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
-  -"Копировать имя файла без рас&ширения"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  -"Копировать и&мя файла	name.ext"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>.<ext>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  -"Копировать &путь к файлу	x:\dir\name.ext" Call("Scripts::Main", 1, "copyPath.js", `"%f"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  -"Копировать п&уть к папке	x:\dir" Call("Scripts::Main", 1, "copyPath.js", `"%f" "<path>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
+  -"Копировать имя файла без рас&ширения	name"    Call("Scripts::Main", 1, "copyPath.js", `"%f" "<file>"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 8)
   SEPARATOR
   -"Редактировать это мен&ю…" Call("ContextMenu::Main", 1, 5, `"&Дополнительно"`)
   SET(16)
