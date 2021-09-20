@@ -206,7 +206,7 @@
     UNSET(64)
     -"Конфигурационные &файлы…" +Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Coder\") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
     SEPARATOR
-    "&Настроить…" Call("Coder::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("Coder::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   "Парные с&кобки" Icon("%a\AkelFiles\Plugs\XBrackets.dll", 0)
   {
@@ -215,7 +215,7 @@
     "&Перейти к парной скобке	Ctrl+>" Call("XBrackets::GoToMatchingBracket")
     "Вы&делить до парной скобки	Ctrl+<" Call("XBrackets::SelToMatchingBracket")
     SEPARATOR
-    "&Настроить…" Call("XBrackets::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("XBrackets::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   "Спе&циальные символы" Icon("%a\AkelFiles\Plugs\SpecialChar.dll", 0) Menu("SPECIAL_CHAR")
   "Номера строк, &закладки" Icon("%a\AkelFiles\Plugs\LineBoard.dll", 0)
@@ -241,7 +241,7 @@
     SEPARATOR
     -"У&далить все закладки	Alt+Shift+Del" Call("LineBoard::Main", 14)
     SEPARATOR
-    "&Настроить…" Call("LineBoard::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("LineBoard::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   "Проверка ор&фографии" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 35)
   {
@@ -251,7 +251,7 @@
     "Проверить &выделение…" Call("SpellCheck::CheckSelection")
     "Проверить &слово…" Call("SpellCheck::Suggest")
     SEPARATOR
-    "&Настроить…" Call("SpellCheck::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("SpellCheck::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   SEPARATOR
   "&Буфер обмена" Icon("%a\AkelFiles\Plugs\Clipboard.dll", 0)
@@ -262,21 +262,21 @@
     "&Автоматическое копирование выделения" +Call("Clipboard::SelAutoCopy")
     "&Вставить текст" Call("Clipboard::Paste") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 9)
     SEPARATOR
-    "&Настроить…" Call("Clipboard::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("Clipboard::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   "Со&хранение файла" Icon("%a\AkelFiles\Plugs\SaveFile.dll", 0)
   {
     "&Автосохранение	Ctrl+Alt+S" +Call("SaveFile::AutoSave")
     "&Сохранение без BOM" +Call("SaveFile::SaveNoBOM")
     SEPARATOR
-    "&Настроить…" Call("SaveFile::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("SaveFile::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   "Просмотр &лога" Icon("%a\AkelFiles\Plugs\Log.dll", 0)
   {
     "&В реальном времени" Call("Log::Watch")
     "&Панель вывода" Call("Log::Output") Icon("%a\AkelFiles\Plugs\Log.dll", 1)
     SEPARATOR
-    "&Настроить…" Call("Log::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("Log::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   SEPARATOR
   "Панель &инструментов" +Call("ToolBar::Main")
@@ -306,7 +306,7 @@
   {
     "&Включить" +Call("Exit::Main")
     SEPARATOR
-    "&Настроить…" Call("Exit::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("Exit::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   "&Выделение текста, навигация" Icon("%a\AkelFiles\Plugs\SmartSel.dll", 0)
   {
@@ -320,7 +320,7 @@
     ;"     Только если &одна строка" +Call("SmartSel::altNoSelEOL")
     "Умная клавиша &Backspace" +Call("SmartSel::SmartBackspace")
     SEPARATOR
-    "&Настроить…" Call("SmartSel::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("SmartSel::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   SEPARATOR
   "Свернуть в &трей	Alt+M" Call("MinimizeToTray::Now") Icon("%a\AkelFiles\Plugs\MinimizeToTray.dll", 0)

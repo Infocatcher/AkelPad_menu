@@ -97,7 +97,7 @@
     "Вы&равнивание каретки" +Call("Scroll::AlignCaret") Icon("%a\AkelFiles\Plugs\Scroll.dll", 4)
     "Авто&фокус и прокрутка вкладок" +Call("Scroll::AutoFocus") Icon("%a\AkelFiles\Plugs\Scroll.dll", 5)
     SEPARATOR
-    "&Настроить…" Call("Scroll::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+    "&Настроить…" Call("Scroll::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   "С&интаксис" Menu("SYNTAX") Icon("%a\AkelFiles\Plugs\Coder.dll", 4)
   "От&метить" Icon("%a\AkelFiles\Plugs\Coder.dll", 0)
@@ -188,7 +188,7 @@
   "Ну&левой символ" Call("SpecialChar::Settings", 1, "6", "0", "0", -1, -1)
   "&Перенос строки" Call("SpecialChar::Settings", 1, "7", "0", "0", -1, -1)
   SEPARATOR
-  "&Настроить…" Call("SpecialChar::Settings") Icon("%a\AkelFiles\Plugs\icons\gear_Fugue.ico")
+  "&Настроить…" Call("SpecialChar::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
 }
 
 "SYNTAX"
