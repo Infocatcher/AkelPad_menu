@@ -148,8 +148,8 @@
 
 "EXPLORE"
 {
-  -"К текущему &файлу" Call("Explorer::Main", 1, "")
-  -"К текущей &папке" Call("Explorer::Main", 1, "%d")
+  -"К текущему &файлу" Call("Explorer::Main", 1, "") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 0)
+  -"К текущей &папке" Call("Explorer::Main", 1, "%d") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 2)
   SEPARATOR
   -"&Корень AkelPad'а" Call("Explorer::Main", 1, "%a") Icon("%a\AkelPad.exe", 0)
   -"Пла&гины AkelPad'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 18)
