@@ -156,8 +156,8 @@
   -"&Скрипты AkelPad'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Scripts") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
   -"Настройки &Coder'а" Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Coder") Icon("%a\AkelFiles\Plugs\Coder.dll", 12)
   SEPARATOR
-  -"&Логический диск AkelPad'а" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetAkelDir()));`)
-  -"Логический &диск текущего файла" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetEditFile(0)));`)
+  -"&Логический диск AkelPad'а" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetAkelDir()));`) Icon("%a\AkelFiles\Plugs\icons\drive_FatCow.ico")
+  -"Логический &диск текущего файла" Call("Scripts::Main", 1, "EvalCmd.js", `AkelPad.Call("Explorer::Main", 1, new ActiveXObject("Scripting.FileSystemObject").GetDriveName(AkelPad.GetEditFile(0)));`) Icon("%a\AkelFiles\Plugs\icons\drive_go_FatCow.ico")
   SEPARATOR
   -"&Program Files" Call("Explorer::Main", 1, "%ProgramFiles%")
   SEPARATOR
