@@ -169,7 +169,7 @@
   -"Корневой каталог: родительский (&4)" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, up(AkelPad.GetEditFile(0), 5)); function up(f, u) { while(f && u--) f = fso.GetParentFolderName(f); return f; }`)
   -"Корневой каталог: родительский (&5)" Call("Scripts::Main", 1, "EvalCmd.js", `var fso = new ActiveXObject("Scripting.FileSystemObject"); AkelPad.Call("Explorer::Main", 4, up(AkelPad.GetEditFile(0), 6)); function up(f, u) { while(f && u--) f = fso.GetParentFolderName(f); return f; }`)
   SEPARATOR
-  -"Корневой каталог: &мой компьютер" Call("Explorer::Main", 4, "-1")
+  -"Корневой каталог: &мой компьютер" Call("Explorer::Main", 4, "-1") Icon("%a\AkelFiles\Plugs\icons\computer_FatCow.ico")
 }
 
 "SPECIAL_CHAR"
