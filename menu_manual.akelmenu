@@ -66,7 +66,7 @@
     #-"Перекодировать Esc-последовательности" Call("Scripts::Main", 1, "converter.js", `-mode=0 '-type="Escapes"'`)
     #-"Перекодировать специальные символы &регулярных выражений" Call("Scripts::Main", 1, "converter.js", `-mode=0 '-type="RegExp"'`)
     SEPARATOR
-    -"Конвертер &величин" Call("Scripts::Main", 1, "measuresConverter.js")
+    -"Конвертер &величин" Call("Scripts::Main", 1, "measuresConverter.js") Icon("%a\AkelFiles\Plugs\icons\conversion_of_currency_FatCow.ico")
     -"Заменить &табы пробелами" Call("Scripts::Main", 1, "TabsToSpaces_mod.js")
     -"JS &Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js")
     -"&CSS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js", "-css=true")
