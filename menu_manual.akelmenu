@@ -68,8 +68,8 @@
     SEPARATOR
     -"Конвертер &величин" Call("Scripts::Main", 1, "measuresConverter.js") Icon("%a\AkelFiles\Plugs\icons\conversion_of_currency_FatCow.ico")
     -"Заменить &табы пробелами" Call("Scripts::Main", 1, "TabsToSpaces_mod.js") Icon("%a\AkelFiles\Plugs\icons\text_indent_FatCow.ico")
-    -"JS &Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js")
-    -"&CSS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js", "-css=true")
+    -"JS &Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js") Icon("%a\AkelFiles\Plugs\icons\script_go_FatCow.ico")
+    -"&CSS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js", "-css=true") Icon("%a\AkelFiles\Plugs\icons\css_go_FatCow.ico")
     SEPARATOR
     -"Вставить &файл…" Call("Scripts::Main", 1, "InsertFile.js")
     -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico", 0)
