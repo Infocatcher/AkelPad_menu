@@ -444,7 +444,7 @@ UNSET(1)
 {
   "&Руководство пользователя	F1" Command(4352) Icon("%a\AkelFiles\Plugs\icons\blue_document_globe_Fugue.ico")
   SEPARATOR
-  "&Плагины"
+  "&Плагины" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 18)
   {
     "Clipboard-Rus.txt" OpenFile("%a\AkelFiles\Docs\Clipboard-Rus.txt") Icon("%a\AkelFiles\Plugs\Clipboard.dll")
     "Coder-Rus.txt" OpenFile("%a\AkelFiles\Docs\Coder-Rus.txt") Icon("%a\AkelFiles\Plugs\Coder.dll", 4)
