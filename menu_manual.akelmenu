@@ -72,7 +72,7 @@
     -"&CSS Beautifier" Call("Scripts::Main", 1, "jsBeautifier.js", "-css=true") Icon("%a\AkelFiles\Plugs\icons\css_go_FatCow.ico")
     SEPARATOR
     -"Вставить &файл…" Call("Scripts::Main", 1, "InsertFile.js")
-    -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico", 0)
+    -"Пере&именовать файл…" Call("Scripts::Main", 1, "RenameFile.js") Icon("%a\AkelFiles\Plugs\icons\document_rename_Fugue.ico")
     #SEPARATOR
     #-"Исправить набор En->Ru" Call("Scripts::Main", 1, "KeybLayoutEngRus.js")
     #-"Исправить набор Ru->En" Call("Scripts::Main", 1, "KeybLayoutRusEng.js")
