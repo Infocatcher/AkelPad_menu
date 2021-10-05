@@ -290,6 +290,7 @@
     -"Управление с&ессиями…	Alt+O" +Call("Sessions::Main") Icon("%a\AkelFiles\Plugs\Sessions.dll", 0)
     SEPARATOR
     "Со&хранить текущую сессию: OnExit	Alt+S" Call("Sessions::Main", 2, "OnExit")
+    SEPARATOR
     "Открыть &предыдущую сессию: OnExit	Ctrl+Shift+O" Call("Sessions::Main", 1, "OnExit")
     "Открыть п&редыдущую сессию: AutoSave" Call("Sessions::Main", 1, "AutoSave")
   }
