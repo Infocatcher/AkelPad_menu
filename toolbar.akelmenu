@@ -33,8 +33,8 @@ SEPARATOR
 "Повторить (Ctrl+Shift+Z)" Command(4152) Icon(11)
 
 SEPARATOR
-"Перевести каретку на предыдущую позицию" Command(4199) Icon("%a\AkelFiles\Plugs\icons\document_page_previous_FatCow.ico")
-"Перевести каретку на следующую позицию" Command(4200) Icon("%a\AkelFiles\Plugs\icons\document_page_next_FatCow.ico")
+"Перевести каретку на предыдущую позицию (Alt+Shift+<)" Command(4199) Icon("%a\AkelFiles\Plugs\icons\document_page_previous_FatCow.ico")
+"Перевести каретку на следующую позицию (Alt+Shift+>)" Command(4200) Icon("%a\AkelFiles\Plugs\icons\document_page_next_FatCow.ico")
 
 SEPARATOR
 "Найти… (Ctrl+F)" Command(4158) Icon(12)
