@@ -31,6 +31,7 @@
     SEPARATOR1
     "Удалить &несуществующие" Command(5001) Icon("%a\AkelFiles\Plugs\icons\notebook_minus_Fugue.ico")
     -"Удалить &все" Call("Scripts::Main", 1, "ClearRecentFiles.js") Icon("%a\AkelFiles\Plugs\icons\notebooks_minus_Fugue.ico")
+    SEPARATOR
     -"&Управление…	Ctrl+F10" Call("RecentFiles::Manage") Icon("%a\AkelFiles\Plugs\RecentFiles.dll", 0)
   }
   SEPARATOR

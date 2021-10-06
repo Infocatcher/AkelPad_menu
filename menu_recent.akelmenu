@@ -29,5 +29,6 @@ SEPARATOR
 -"&Удалить файл из списка" Call("Scripts::Main", 1, "DeleteRecentFile.js", `'%f'`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 25)
 "Удалить &несуществующие файлы" Command(5001) Icon("%a\AkelFiles\Plugs\icons\notebook_minus_Fugue.ico")
 -"Удалить &все файлы" Call("Scripts::Main", 1, "ClearRecentFiles.js") Icon("%a\AkelFiles\Plugs\icons\notebooks_minus_Fugue.ico")
+SEPARATOR
 -"Управление последними &файлами…	Ctrl+F10" Call("RecentFiles::Manage") Icon("%a\AkelFiles\Plugs\RecentFiles.dll", 0)
 UNSET(16)
