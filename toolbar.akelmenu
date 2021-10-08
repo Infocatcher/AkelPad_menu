@@ -101,3 +101,7 @@ SEPARATOR
 SET(128, If(`Call("Scripts::Main", 5, "converter.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
   "Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
 UNSET(128)
+
+SET(128, If(`Call("Scripts::Main", 5, "measuresConverter.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
+  "Конвертер величин" Call("Scripts::Main", 1, "measuresConverter.js") Icon("%a\AkelFiles\Plugs\icons\conversion_of_currency_FatCow.ico")
+UNSET(128)
