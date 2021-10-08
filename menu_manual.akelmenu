@@ -47,7 +47,7 @@
   "Выде&ление" Menu("SELECTION") Icon("%a\AkelFiles\Plugs\icons\document_inspect_FatCow.ico")
   "&Скрипты" Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
   {
-    -"&Последний вызванный" Call("Scripts::Main", 1, "")
+    -"&Последний вызванный" Call("Scripts::Main", 1, "") Icon("%a\AkelFiles\Plugs\icons\arrow_repeat_FatCow.ico")
     SEPARATOR
     -"Проверить &орфографию…" Call("Scripts::Main", 1, "SpellCheck.js")
     SEPARATOR
