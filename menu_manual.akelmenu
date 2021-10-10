@@ -52,9 +52,15 @@
     -"Проверить &орфографию…" Call("Scripts::Main", 1, "SpellCheck.js")
     SEPARATOR
     -"Вы&числить выражение…	Alt+Shift+E" Call("Scripts::Main", 1, "insertEval.js") Icon("%a\AkelFiles\Plugs\icons\calculator_Fugue.ico")
-    -"Вычислить &хэш-сумму…" Call("Scripts::Main", 1, "getHash.js") Icon("%a\AkelFiles\Plugs\icons\sum_FatCow.ico")
-    -"&Шифрование (AES-256/Blowfish)…" Call("Scripts::Main", 1, "crypt.js") Icon("%a\AkelFiles\Plugs\icons\lock_FatCow.ico")
-    -"&Шифрование+ (AES-256/Blowfish/Twofish/Serpent)…" Call("Scripts::Main", 1, "cryptExt.js") Icon("%a\AkelFiles\Plugs\icons\lock_add_FatCow.ico")
+    SET(128, If(`Call("Scripts::Main", 5, "getHash.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
+      "Вычислить &хэш-сумму…" Call("Scripts::Main", 1, "getHash.js") Icon("%a\AkelFiles\Plugs\icons\sum_FatCow.ico")
+    UNSET(128)
+    SET(128, If(`Call("Scripts::Main", 5, "crypt.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
+      "&Шифрование (AES-256/Blowfish)…" Call("Scripts::Main", 1, "crypt.js") Icon("%a\AkelFiles\Plugs\icons\lock_FatCow.ico")
+    UNSET(128)
+    SET(128, If(`Call("Scripts::Main", 5, "cryptExt.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
+      "&Шифрование+ (AES-256/Blowfish/Twofish/Serpent)…" Call("Scripts::Main", 1, "cryptExt.js") Icon("%a\AkelFiles\Plugs\icons\lock_add_FatCow.ico")
+    UNSET(128)
     SEPARATOR
     SET(128, If(`Call("Scripts::Main", 5, "converter.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
       "&Конвертировать…" Call("Scripts::Main", 1, "converter.js") Icon("%a\AkelFiles\Plugs\icons\modify_gnome.ico")
