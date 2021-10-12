@@ -93,7 +93,7 @@
     SEPARATOR
     -"&Скрипты…	Ctrl+J" Call("Scripts::Main") Icon("%a\AkelFiles\Plugs\Scripts.dll", 0)
     SET(128, If(`Call("Scripts::Main", 5, "runScript.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
-      "Запустить скрипт с аргу&ментами…	Alt+J" Call("Scripts::Main", 1, "runScript.js")
+      "Запустить скрипт с аргу&ментами…	Alt+J" Call("Scripts::Main", 1, "runScript.js") Icon("%a\AkelFiles\Plugs\icons\script_gear_FatCow.ico")
     UNSET(128)
   }
   SEPARATOR
