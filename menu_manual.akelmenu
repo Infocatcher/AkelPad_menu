@@ -165,6 +165,7 @@
   "&INI	Ctrl+Alt+I" Call("Coder::Settings", 1, "ini")
   "&Inno" Call("Coder::Settings", 1, "iss")
   "&JavaScript	Ctrl+Alt+J" Call("Coder::Settings", 1, "js")
+  "&Logs" Call("Coder::Settings", 1, "log")
   "&Lua" Call("Coder::Settings", 1, "lua")
   "&MarkDown" Call("Coder::Settings", 1, "md")
   "&NSIS" Call("Coder::Settings", 1, "nsi")
