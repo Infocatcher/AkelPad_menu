@@ -105,5 +105,5 @@ SET(128, If(`Call("Scripts::Main", 5, "converter.js", 2 /*SH_THISSCRIPT*/, &nRes
 UNSET(128)
 
 SET(128, If(`Call("Scripts::Main", 5, "measuresConverter.js", 2 /*SH_THISSCRIPT*/, &nResult)`, 0x1, 0x0))
-  "Конвертер величин" Call("Scripts::Main", 1, "measuresConverter.js") Icon("%a\AkelFiles\Plugs\icons\conversion_of_currency_FatCow.ico")
+  "Конвертер величин" Call("Scripts::Main", 1, "measuresConverter.js", `-currencies="BTC,BYN,CNY,EUR,GBP,RUB,UAH,USD"`) Icon("%a\AkelFiles\Plugs\icons\conversion_of_currency_FatCow.ico")
 UNSET(128)
