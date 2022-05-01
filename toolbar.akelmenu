@@ -9,6 +9,8 @@
 SET(1)
 -"Список окон…" Call("Scripts::Main", 1, "TabSwitch.js", `-Next=-1 -CtrlTab=false -RightLeft=true -MinTabs=1 -FontName="Tahoma" -FontSize=9 -SingleClick=true -ShowModify=2 -WindowLeft=%bl -WindowTop=%bb`) Icon("%a\AkelFiles\Plugs\icons\notebooks_Fugue.ico")
 UNSET(1)
+-"Растянуть: вниз влево + 1280×720" Call("Scripts::Main", 1, "moveResizeWindow.js", "-resize=1280*720 -move=left*bottom") Icon("%a\AkelFiles\Plugs\icons\window_align_left-bottom.ico")
+SEPARATOR
 "Переоткрыть (F5)" Command(4104) Icon(3)
 
 #SEPARATOR
