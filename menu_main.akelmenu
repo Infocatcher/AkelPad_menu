@@ -207,7 +207,11 @@
     UNSET(64)
     -"Конфигурационные &файлы…" +Call("Explorer::Main", 1, "%a\AkelFiles\Plugs\Coder\") Icon("%a\AkelFiles\Plugs\Explorer.dll", 0)
     SEPARATOR
-    "&Настроить…" Call("Coder::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
+    "&Настроить плагин Coder…" Call("Coder::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
+    SEPARATOR
+    -"Показать/скрыть &карту файла" Call("TagsView::TagsView") Icon("%a\AkelFiles\Plugs\TagsView.dll", 0)
+    SEPARATOR
+     "&Настроить плагин TagsView…" Call("TagsView::Settings") Icon("%a\AkelFiles\Plugs\icons\gnome-settings.ico")
   }
   "Парные с&кобки" Icon("%a\AkelFiles\Plugs\XBrackets.dll", 0)
   {
@@ -474,7 +478,7 @@ UNSET(1)
     "Speech-Rus.txt" OpenFile("%a\AkelFiles\Docs\Speech-Rus.txt") Icon("%a\AkelFiles\Plugs\Speech.dll")
     "SpellCheck-Rus.txt" OpenFile("%a\AkelFiles\Docs\SpellCheck-Rus.txt") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 35)
     "Stats-Rus.txt" OpenFile("%a\AkelFiles\Docs\Stats-Rus.txt") Icon("%a\AkelFiles\Plugs\Stats.dll")
-    #"TagsView.txt" OpenFile("%a\AkelFiles\Docs\TagsView.txt") Icon("%a\AkelFiles\Plugs\TagsView.dll")
+    "TagsView.txt" OpenFile("%a\AkelFiles\Docs\TagsView.txt") Icon("%a\AkelFiles\Plugs\TagsView.dll")
     "Templates-Rus.txt" OpenFile("%a\AkelFiles\Docs\Templates-Rus.txt") Icon("%a\AkelFiles\Plugs\Toolbar.dll", 37)
     "ToolBar-Rus.txt" OpenFile("%a\AkelFiles\Docs\ToolBar-Rus.txt") Icon("%a\AkelFiles\Plugs\ToolBar.dll")
     "XBrackets-Rus.txt" OpenFile("%a\AkelFiles\Docs\XBrackets-Rus.txt") Icon("%a\AkelFiles\Plugs\XBrackets.dll")
