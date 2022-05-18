@@ -202,6 +202,8 @@
     "&Сворачивание блоков" +Call("Coder::CodeFold") Icon("%a\AkelFiles\Plugs\Coder.dll", 1)
     "&Автодополнение" +Call("Coder::AutoComplete") Icon("%a\AkelFiles\Plugs\Coder.dll", 2)
     SEPARATOR
+    -"Показать/скрыть список &блоков" Call("Scripts::Main", 1, "EvalCmd.js", `'var cf = "Coder::CodeFold"; if(!AkelPad.IsPluginRunning(cf)) AkelPad.Call(cf); AkelPad.Call(cf, 1);'`) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
+    SEPARATOR
     SET(64, If(`Call("Coder::Settings", 2, &nResult) == 1 /*UC_FAST*/`))
       "&Обновить кэш	Alt+Shift+R" Call("Coder::Settings", 2) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 3)
     UNSET(64)
