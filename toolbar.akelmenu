@@ -85,6 +85,8 @@ SEPARATOR
 #"Сворачивание блоков: показать/скрыть список" Call("Coder::CodeFold", 1) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
 -"Сворачивание блоков: показать/скрыть список" Call("Scripts::Main", 1, "EvalCmd.js", `'var cf = "Coder::CodeFold"; if(!AkelPad.IsPluginRunning(cf)) AkelPad.Call(cf); AkelPad.Call(cf, 1);'`) Icon("%a\AkelFiles\Plugs\Coder.dll", 3)
 
+-"TagsView: показать/скрыть карту файла" Call("TagsView::TagsView") Icon("%a\AkelFiles\Plugs\TagsView.dll", 0)
+
 #"Автодополнение" +Call("Coder::AutoComplete") Icon("%a\AkelFiles\Plugs\Coder.dll", 2)
 
 #"Специальные символы" +Call("SpecialChar::Main") Icon("%a\AkelFiles\Plugs\SpecialChar.dll", 0)
