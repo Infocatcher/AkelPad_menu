@@ -39,6 +39,10 @@ SEPARATOR
 "Перевести каретку на следующую позицию (Alt+Shift+>)" Command(4200) Icon("%a\AkelFiles\Plugs\icons\document_page_next_FatCow.ico")
 
 SEPARATOR
+"Переключить многострочную панель инструментов" Call("Scripts::Main", 1, "toggleToolbarRows.js") Icon("%a\AkelFiles\Plugs\icons\splitter_FatCow.ico")
+
+#BREAK
+
 "Найти… (Ctrl+F)" Command(4158) Icon(12)
 "Заменить… (Ctrl+H)" Command(4161) Icon(13)
 "Вставить символ (Ctrl+I)" Command(4163) Icon(14)
