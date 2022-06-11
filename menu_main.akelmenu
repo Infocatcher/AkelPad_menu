@@ -74,13 +74,7 @@
   -"Фил&ьтр строк…	Ctrl+Shift+F" Call("Scripts::Main", 1, "LinesFilter_mod.js") Icon("%a\AkelFiles\Plugs\Explorer.dll", 2)
   SEPARATOR
   "Вставить &символ	Ctrl+I" Command(4163) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 14)
-  "Вставить &дату" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
-  {
-    "По &умолчанию" Command(4183) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
-    -"гггг-мм-&дд	Ctrl+Shift+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
-    -"гггг-мм-дд чч:&мм	Ctrl+Alt+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
-    -"гггг-мм-дд чч:мм:&сс	Ctrl+Alt+Shift+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm:ss"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
-  }
+  "Вставить &дату" Menu("DATE") Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
   "Выде&ление" Menu("SELECTION") Icon("%a\AkelFiles\Plugs\icons\document_inspect_FatCow.ico")
   "&Формат новой строки"
   {

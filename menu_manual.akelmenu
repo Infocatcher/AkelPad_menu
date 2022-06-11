@@ -193,6 +193,14 @@
   -"В&ыбрать…	Alt+Shift+H" Call("Scripts::Main", 1, "highlighter.js")
 }
 
+"DATE"
+{
+  "По &умолчанию" Command(4183) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+  -"гггг-мм-&дд	Ctrl+Shift+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+  -"гггг-мм-дд чч:&мм	Ctrl+Alt+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+  -"гггг-мм-дд чч:мм:&сс	Ctrl+Alt+Shift+D" Call("Scripts::Main", 1, "InsertDate.js", `"yyyy-MM-dd HH:mm:ss"`) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 26)
+}
+
 "SELECTION"
 {
   "&Вертикальная вставка	Alt+V" Command(4192)
