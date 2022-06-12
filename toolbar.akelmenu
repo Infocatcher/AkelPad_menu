@@ -47,6 +47,7 @@ SEPARATOR
 "Заменить… (Ctrl+H)" Command(4161) Icon(13)
 "Вставить символ (Ctrl+I)" Command(4163) Icon(14)
 #"Вставить дату (Ctrl+D)" Command(4183) Icon(26)
+"Вставить дату" Menu("DATE") Icon(26)
 
 #SEPARATOR
 #"Шрифт…" Command(4201) Icon(27)
