@@ -143,7 +143,7 @@
   "&Пробел" Call("SpecialChar::Settings", 1, "1", "0", "0", -1, -1)
   "Не&разрывные пробелы" Call("SpecialChar::Settings", 1, "\x00A0,\x2002,\x2003,\x2009", "0", "0", -1, -1)
   "&Табуляция" Call("SpecialChar::Settings", 1, "2", "0", "0", -1, -1)
-  "&Новая строка" Call("SpecialChar::Settings", 1, "3", "0", "0", -1, -1)
+  "Новая &строка" Call("SpecialChar::Settings", 1, "3", "0", "0", -1, -1)
   "В&ертикальная табуляция" Call("SpecialChar::Settings", 1, "4", "0", "0", -1, -1)
   "Про&гон листа" Call("SpecialChar::Settings", 1, "5", "0", "0", -1, -1)
   "Ну&левой символ" Call("SpecialChar::Settings", 1, "6", "0", "0", -1, -1)
