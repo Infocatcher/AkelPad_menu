@@ -80,7 +80,7 @@
   SEPARATOR
   "Hex-код" +Call("HexSel::Main") Icon("%a\AkelFiles\Plugs\HexSel.dll", 0)
   "Статистика" Call("Stats::Main") Icon("%a\AkelFiles\Plugs\icons\chart_bar_FatCow.ico")
-  -"Статистика расширенная" Call("Scripts::Main", 1, "textStatistics.js")
+  -"Статистика расширенная" Call("Scripts::Main", 1, "textStatistics.js") Icon("%a\AkelFiles\Plugs\icons\chart_bar_add_FatCow.ico")
   SEPARATOR
   SET(128, If(`AkelPad.IsPluginRunning("FullScreen::Main")`, 0x1, 0x0))
     "Полнооконный ре&жим	Shift+F11" Call("Scripts::Main", 1, "fullWindow.js") Icon("%a\AkelFiles\Plugs\icons\application-resize-full_Fugue.ico")
