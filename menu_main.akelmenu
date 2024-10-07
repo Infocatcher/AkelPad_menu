@@ -118,8 +118,9 @@
 {
   "&Шрифт" Icon("%a\AkelFiles\Plugs\ToolBar.dll", 27)
   {
-    -"У&величить	Ctrl+Num+" Command(4204) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 28)
-    -"У&меньшить	Ctrl+Num−" Command(4205) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 29)
+    "У&величить	Ctrl+Num+" Command(4204) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 28)
+    "У&меньшить	Ctrl+Num−" Command(4205) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 29)
+    "Во&сстановить	Ctrl+Num*" Command(4206)
     SEPARATOR
     "Courier New &Mod, 11pt	Ctrl+Num0" Font("Courier New Mod", 0, 11)
     SEPARATOR
