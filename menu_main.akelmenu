@@ -135,7 +135,7 @@
     SEPARATOR
     "&Arial Unicode MS, 11pt" Font("Arial Unicode MS", 0, 11)
     SEPARATOR
-    "&Выбрать…" Command(4201) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 27)
+    "В&ыбрать…" Command(4201) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 27)
   }
   "&Цвета…" Command(4202)  Icon("%a\AkelFiles\Plugs\ToolBar.dll", 30)
   SEPARATOR
