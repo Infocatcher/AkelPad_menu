@@ -6,6 +6,9 @@
 SEPARATOR
 "&Новая вкладка	Ctrl+N" Command(4101) Icon("%a\AkelFiles\Plugs\ToolBar.dll", 0)
 SEPARATOR
+# "" Command(4322)
+-"К&лонировать вкладку" Call("Scripts::Main", 1, "forceCloneTab.js")
+SEPARATOR
 "&Закрыть вкладку	Ctrl+W" Command(4318)
 -"Забыть об этой вкладке" Call("Scripts::Main", 1, "forgetAboutTab.js") Icon("%a\AkelFiles\Plugs\icons\tab_delete_FatCow.ico")
 "Закр&ыть…" Menu("CLOSE")
